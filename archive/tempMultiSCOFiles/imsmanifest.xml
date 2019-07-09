@@ -1,0 +1,53 @@
+<?xml version="1.0" standalone="no"?>
+<manifest identifier="_5fXTSqbzScB_course_id" version="1.3" xmlns="http://www.imsglobal.org/xsd/imscp_v1p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_v1p3" xmlns:adlseq="http://www.adlnet.org/xsd/adlseq_v1p3" xmlns:adlnav="http://www.adlnet.org/xsd/adlnav_v1p3" xmlns:imsss="http://www.imsglobal.org/xsd/imsss" xsi:schemaLocation="http://www.imsglobal.org/xsd/imscp_v1p1 imscp_v1p1.xsd
+                              http://www.adlnet.org/xsd/adlcp_v1p3 adlcp_v1p3.xsd
+                              http://www.adlnet.org/xsd/adlseq_v1p3 adlseq_v1p3.xsd
+                              http://www.adlnet.org/xsd/adlnav_v1p3 adlnav_v1p3.xsd
+                              http://www.imsglobal.org/xsd/imsss imsss_v1p0.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <!-- adlcp:location>metadata.xml</adlcp:location -->
+  </metadata>
+  <organizations default="GPTE">
+    <organization identifier="GPTE">
+        <title>Advanced Agile Integration</title>
+<item identifier="01_Introduction_to_Agile_Integration slides" identifierref="01_Introduction_to_Agile_Integration slides" isvisible="true"><title>1: Introduction</title></item>
+<item identifier="01_0_Common_Installation_Steps_Lab" identifierref="01_0_Common_Installation_Steps_Lab" isvisible="true"><title>Lab 1.1: Introduction</title></item>
+<item identifier="01_1_Environment_Setup_Lab" identifierref="01_1_Environment_Setup_Lab" isvisible="true"><title>Lab 1.2: Environment Setup</title></item>
+<item identifier="02_Fuse slides" identifierref="02_Fuse slides" isvisible="true"><title>2: Red Hat Fuse</title></item>
+<item identifier="02_1_File_Split_Transform_Lab" identifierref="02_1_File_Split_Transform_Lab" isvisible="true"><title>Lab 2.1: CSV File Transformation</title></item>
+<item identifier="02_2_Rest_Split_Transform_Lab" identifierref="02_2_Rest_Split_Transform_Lab" isvisible="true"><title>Lab 2.2: CSV Transformation from REST Endpoint</title></item>
+<item identifier="02_3_Rest_Publish_Fix_Errors_Lab" identifierref="02_3_Rest_Publish_Fix_Errors_Lab" isvisible="true"><title>Lab 2.3: Record Publication and Correction</title></item>
+<item identifier="02_4_Enrich_HTTP_Services_Lab" identifierref="02_4_Enrich_HTTP_Services_Lab" isvisible="true"><title>Lab 2.4: Content Enrichment and Data Aggregation</title></item>
+<item identifier="02_5_Migrate_Fuse6_Services_Lab" identifierref="02_5_Migrate_Fuse6_Services_Lab" isvisible="true"><title>Lab 2.5: Application Migration with Red Hat Fuse</title></item>
+<item identifier="03_Fuse_Online slides" identifierref="03_Fuse_Online slides" isvisible="true"><title>3: Red Hat Fuse Online</title></item>
+<item identifier="03_1_fuse_online_enrich_transform_amq__Lab" identifierref="03_1_fuse_online_enrich_transform_amq__Lab" isvisible="true"><title>Lab 3.1: Content Enrichment and Data Aggregation on Red Hat Fuse Online</title></item>
+<item identifier="03_2_fuse_online_rest_enrich_transform_api_Lab" identifierref="03_2_fuse_online_rest_enrich_transform_api_Lab" isvisible="true"><title>Lab 3.2: Additional Enrichment and Aggregation on Red Hat Fuse Online</title></item>
+<item identifier="04_3scale slides" identifierref="04_3scale slides" isvisible="true"><title>4: API Life Cycle and Service Discovery with 3scale by Red Hat</title></item>
+<item identifier="04_1_api_discovery_management_Lab" identifierref="04_1_api_discovery_management_Lab" isvisible="true"><title>Lab 4: Integration with Red Hat 3scale API Management</title></item>
+<item identifier="05_AMQ slides" identifierref="05_AMQ slides" isvisible="true"><title>5: Red Hat AMQ</title></item>
+<item identifier="05_1_amq_online_Lab" identifierref="05_1_amq_online_Lab" isvisible="true"><title>Lab 5: Red Hat AMQ Online Messaging Platform</title></item>
+<item identifier="06_1_Assignment_Lab" identifierref="06_1_Assignment_Lab" isvisible="true"><title>Homework: Business Scenario</title></item>
+    </organization>
+  </organizations>
+  <resources>
+<resource identifier="01_Introduction_to_Agile_Integration slides" type="webcontent" adlcp:scormtype="sco" href="01_Introduction_to_Agile_Integration/scormdriver/indexAPI.html"></resource>
+<resource identifier="01_0_Common_Installation_Steps_Lab" type="webcontent" adlcp:scormtype="asset" href="01_Introduction_to_Agile_Integration/01_0_Common_Installation_Steps_Lab.html"></resource>
+<resource identifier="01_1_Environment_Setup_Lab" type="webcontent" adlcp:scormtype="asset" href="01_Introduction_to_Agile_Integration/01_1_Environment_Setup_Lab.html"></resource>
+<resource identifier="02_Fuse slides" type="webcontent" adlcp:scormtype="sco" href="02_Fuse/scormdriver/indexAPI.html"></resource>
+<resource identifier="02_1_File_Split_Transform_Lab" type="webcontent" adlcp:scormtype="asset" href="02_Fuse/02_1_File_Split_Transform_Lab.html"></resource>
+<resource identifier="02_2_Rest_Split_Transform_Lab" type="webcontent" adlcp:scormtype="asset" href="02_Fuse/02_2_Rest_Split_Transform_Lab.html"></resource>
+<resource identifier="02_3_Rest_Publish_Fix_Errors_Lab" type="webcontent" adlcp:scormtype="asset" href="02_Fuse/02_3_Rest_Publish_Fix_Errors_Lab.html"></resource>
+<resource identifier="02_4_Enrich_HTTP_Services_Lab" type="webcontent" adlcp:scormtype="asset" href="02_Fuse/02_4_Enrich_HTTP_Services_Lab.html"></resource>
+<resource identifier="02_5_Migrate_Fuse6_Services_Lab" type="webcontent" adlcp:scormtype="asset" href="02_Fuse/02_5_Migrate_Fuse6_Services_Lab.html"></resource>
+<resource identifier="03_Fuse_Online slides" type="webcontent" adlcp:scormtype="sco" href="03_Fuse_Online/scormdriver/indexAPI.html"></resource>
+<resource identifier="03_1_fuse_online_enrich_transform_amq__Lab" type="webcontent" adlcp:scormtype="asset" href="03_Fuse_Online/03_1_fuse_online_enrich_transform_amq__Lab.html"></resource>
+<resource identifier="03_2_fuse_online_rest_enrich_transform_api_Lab" type="webcontent" adlcp:scormtype="asset" href="03_Fuse_Online/03_2_fuse_online_rest_enrich_transform_api_Lab.html"></resource>
+<resource identifier="04_3scale slides" type="webcontent" adlcp:scormtype="sco" href="04_3scale/scormdriver/indexAPI.html"></resource>
+<resource identifier="04_1_api_discovery_management_Lab" type="webcontent" adlcp:scormtype="asset" href="04_3scale/04_1_api_discovery_management_Lab.html"></resource>
+<resource identifier="05_AMQ slides" type="webcontent" adlcp:scormtype="sco" href="05_AMQ/scormdriver/indexAPI.html"></resource>
+<resource identifier="05_1_amq_online_Lab" type="webcontent" adlcp:scormtype="asset" href="05_AMQ/05_1_amq_online_Lab.html"></resource>
+<resource identifier="06_1_Assignment_Lab" type="webcontent" adlcp:scormtype="asset" href="06_Homework/06_1_Assignment_Lab.html"></resource>
+  </resources>
+</manifest>

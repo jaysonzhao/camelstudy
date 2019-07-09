@@ -1,0 +1,32 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  annotations:
+    discovery.3scale.net/path: /rest
+    discovery.3scale.net/discovery-version: v1
+    discovery.3scale.net/scheme: http
+    discovery.3scale.net/port: "8080"
+    fabric8.io/git-commit: 04c9b7fa3c6328d8cfab145395fc15255084a0e5
+    fabric8.io/iconUrl: img/icons/camel.svg
+    fabric8.io/git-branch: master
+    prometheus.io/scrape: "true"
+    prometheus.io/port: "9779"
+  labels:
+    expose: "true"
+    discovery.3scale.net: "true"
+    app: rest-split-transform-amq-lab
+    provider: fabric8
+    version: 1.0.0
+    group: com.redhat.training.gpte
+  name: rest-split-transform-amq-lab
+spec:
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    app: rest-split-transform-amq-lab
+    provider: fabric8
+    group: com.redhat.training.gpte

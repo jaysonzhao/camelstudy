@@ -1,0 +1,93 @@
+---
+apiVersion: apps.openshift.io/v1
+kind: DeploymentConfig
+metadata:
+  annotations:
+    fabric8.io/git-commit: 04c9b7fa3c6328d8cfab145395fc15255084a0e5
+    fabric8.io/iconUrl: img/icons/camel.svg
+    fabric8.io/git-branch: master
+    fabric8.io/metrics-path: dashboard/file/camel-routes.json/?var-project=rest-split-transform-amq-lab&var-version=1.0.0
+  labels:
+    app: rest-split-transform-amq-lab
+    provider: fabric8
+    version: 1.0.0
+    group: com.redhat.training.gpte
+  name: rest-split-transform-amq-lab
+spec:
+  replicas: 1
+  revisionHistoryLimit: 2
+  selector:
+    app: rest-split-transform-amq-lab
+    provider: fabric8
+    group: com.redhat.training.gpte
+  strategy:
+    rollingParams:
+      timeoutSeconds: 3600
+    type: Rolling
+  template:
+    metadata:
+      annotations:
+        fabric8.io/git-commit: 04c9b7fa3c6328d8cfab145395fc15255084a0e5
+        fabric8.io/iconUrl: img/icons/camel.svg
+        fabric8.io/git-branch: master
+        fabric8.io/metrics-path: dashboard/file/camel-routes.json/?var-project=rest-split-transform-amq-lab&var-version=1.0.0
+      labels:
+        app: rest-split-transform-amq-lab
+        provider: fabric8
+        version: 1.0.0
+        group: com.redhat.training.gpte
+    spec:
+      containers:
+      - env:
+        - name: SPRING_APPLICATION_JSON
+          value: '{"server":{"undertow":{"io-threads":1, "worker-threads":2 }}}'
+        - name: AMQP_HOST
+          value: broker-amq-amqp
+        - name: KUBERNETES_NAMESPACE
+          valueFrom:
+            fieldRef:
+              fieldPath: metadata.namespace
+        image: rest-split-transform-amq-lab:1.0.0
+        imagePullPolicy: IfNotPresent
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 8081
+            scheme: HTTP
+          initialDelaySeconds: 180
+        name: spring-boot
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        - containerPort: 9779
+          name: prometheus
+          protocol: TCP
+        - containerPort: 8778
+          name: jolokia
+          protocol: TCP
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 8081
+            scheme: HTTP
+          initialDelaySeconds: 10
+        resources:
+          limits:
+            cpu: "1.0"
+            memory: 1Gi
+          requests:
+            cpu: "1.0"
+            memory: 512Mi
+        securityContext:
+          privileged: false
+  triggers:
+  - type: ConfigChange
+  - imageChangeParams:
+      automatic: true
+      containerNames:
+      - spring-boot
+      from:
+        kind: ImageStreamTag
+        name: rest-split-transform-amq-lab:1.0.0
+    type: ImageChange

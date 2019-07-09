@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: List
+items:
+- apiVersion: image.openshift.io/v1
+  kind: ImageStream
+  metadata:
+    name: rest-split-transform-amq-lab
+  spec:
+    tags:
+    - from:
+        kind: ImageStreamImage
+        name: rest-split-transform-amq-lab@sha256:2cfc1626c5d897939b053c6638969ff8efcf809963bba5b7af9d1e84c0f17b97
+        namespace: rhhong-fuse
+      name: 1.0.0

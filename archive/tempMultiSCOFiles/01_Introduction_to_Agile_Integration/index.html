@@ -1,0 +1,2869 @@
+<!DOCTYPE html>
+	<html class="sl-root decks export offline loaded">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>AI Advanced Module 1</title>
+
+
+		<link rel="stylesheet" type="text/css" href="lib/offline-v2.css">
+
+		<!-- Team CSS -->
+		<style id="global-css-output" type="text/css">
+			@import url("https://s3.amazonaws.com/static.slid.es/fonts/overpass2/overpass2.css");
+.reveal {
+  
+
+  /*fix icon inversion*/
+
+}
+.reveal svg,
+.reveal text,
+.reveal tspan,
+.reveal svg text {
+  font-family: "Overpass 2", Overpass, sans-serif !important;
+  color: currentcolor;
+  fill: currentcolor;
+}
+.reveal .sl-block {
+  color: #354045;
+  fill: currentcolor;
+}
+.reveal .sl-block svg {
+  color: currentcolor;
+}
+.reveal .has-dark-background,
+.reveal .has-dark-background > .sl-block {
+  color: white;
+  fill: currentcolor;
+}
+.reveal section > .sl-block .redhat-logo .logotext {
+  fill: #000000;
+}
+.reveal .has-dark-background > .sl-block .redhat-logo .logotext {
+  fill: #ffffff;
+}
+.reveal .has-dark-background > .sl-block[data-block-type="image"] {
+  color: #ffffff;
+}
+.reveal [fill="none"] {
+  fill: none !important;
+}
+.reveal [fill="#a30000"] {
+  fill: #aa0000 !important;
+}
+.reveal [fill="#cc2029"],
+.reveal [fill="#cb2027"],
+.reveal [fill="#c00"] {
+  fill: #cc0000 !important;
+}
+.reveal [fill="#fff"] {
+  fill: #ffffff !important;
+}
+.reveal [fill="#6d6e70"] {
+  fill: #6d6e70 !important;
+}
+.reveal [fill="#231f20"] {
+  fill: currentcolor !important;
+}
+.reveal [fill="#efab1f"] {
+  fill: #efab1f !important;
+}
+.reveal [fill="#92d400"] {
+  fill: #92d400 !important;
+}
+.reveal .has-dark-background [fill="#6d6e70"] {
+  fill: #266272 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #555555 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #333333 !important;
+}
+.reveal .has-dark-background [stroke="#231f20"] {
+  stroke: currentcolor;
+}
+.reveal [data-inline-svg="true"] img {
+  display: none;
+}
+
+		</style>
+
+		<!-- Theme CSS -->
+		<style id="theme-css-output" type="text/css">
+			@import url(//overpassmonotest-30e2.kxcdn.com/overpass-mono.css);
+.reveal {
+  
+  /*
+.sl-block[data-block-type="snippet"],
+.sl-block[data-block-type="image"] 
+{
+text,
+tspan,
+polygon,
+path,
+rect,
+ellipse {
+  fill: currentcolor;
+}
+}
+*/
+  /*slide-default*/
+  /*Custom Ordered Lists */
+  /*helpers*/
+  /*fixing left aligned text*/
+  /*h1,h2,h3,h4,h5,h6{&::first-letter{margin-left:-.09em;}}*/
+  /*icon absolute brute-fix*/
+  /*
+.present .icon.stroked path.long{ stroke-width: 2px ;
+-webkit-animation: icon-animation-long 3.5s 1.5s 1;
+-moz-animation:    icon-animation-long 3.5s 1.5s 1;
+animation:         icon-animation-long 3.5s 1.5s 1;
+}*/
+  /*
+.present .icon.stroked path.short{
+-webkit-animation: icon-animation-short 3.5s 1.5s 1;
+-moz-animation:    icon-animation-short 3.5s 1.5s 1;
+animation:         icon-animation-short 3.5s 1.5s 1;
+}*/
+  /*controls logic*/
+  /*animated logos with complex svg segments*/
+  /*transitions*/
+  /*logos svg files that contain inverted path alternates */
+  /* call to action */
+  /* tables in snippets.... the devil */
+  /* tables in text */
+  /*testimonial snippet */
+  /*for inverting images*/
+  /**/
+  /*code blocks*/
+  /* round line arrows */
+  /*fix icon inversion*/
+  /*body:hover .corner svg{transform: translate(30%, 30%)}*/
+}
+.reveal.reveal[role="application"] > .backgrounds > .slide-background:not(.stack):first-child,
+.reveal.reveal[role="application"] > .backgrounds > .stack:first-child > .slide-background:first-child,
+.reveal.reveal[role="application"] .slides > .pdf-page:not(.stack):first-child .slide-background,
+.reveal.reveal[role="application"] .slides > .stack:first-child > .pdf-page:first-child .slide-background {
+  background-color: #900;
+  color: #fff;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-image: linear-gradient(-45deg, #8e0000 20%, #820000 20%, #990000 85%, #890000 85%);
+  min-height: 100vh;
+}
+.reveal.reveal[role="application"] > .backgrounds > .slide-background:not(.stack):first-child.has-light-background,
+.reveal.reveal[role="application"] > .backgrounds > .stack:first-child > .slide-background:first-child.has-light-background,
+.reveal.reveal[role="application"] .slides > .pdf-page:not(.stack):first-child .slide-background.has-light-background,
+.reveal.reveal[role="application"] .slides > .stack:first-child > .pdf-page:first-child .slide-background.has-light-background {
+  background-image: none;
+}
+.reveal.reveal .slides > .section:first-child,
+.reveal.reveal[role="application"] > .slides > .section:first-child .sl-block {
+  color: #fff;
+}
+.reveal .name {
+  white-space: nowrap;
+}
+.reveal .reveal,
+.reveal .sl-block,
+.reveal .sl-block-content,
+.reveal .sl-block-content div,
+.reveal .sl-block-content p,
+.reveal .sl-block-content h1,
+.reveal .sl-block-content h2,
+.reveal .sl-block-content h3,
+.reveal .sl-block-content h4 {
+  font-family: "Overpass 2", overpass, "Hiragino Kaku Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", sans-serif;
+}
+.reveal .future .sl-block-content,
+.reveal .past .sl-block-content {
+  transition: none !important;
+}
+.reveal section,
+.reveal.reveal .has-dark-background,
+.reveal section.background-shade-dark {
+  color: #fff;
+}
+.reveal.reveal .has-dark-background a {
+  color: #eee;
+}
+.reveal.reveal .has-dark-background a:hover {
+  color: #fff;
+}
+.reveal .backgrounds {
+  background: #f3f4f4;
+}
+.reveal .slide-background {
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+}
+.reveal .slide-background.has-light-background {
+  /*background-image: url(//s3.amazonaws.com/media-p.slid.es/uploads/team-32/images/1297460/standard-background.svg);*/
+}
+.reveal .backgrounds .paint-it-red {
+  background-color: #c00 !important;
+  -moz-background-blend-mode: multiply;
+  -webkit-background-blend-mode: multiply;
+  -ms-background-blend-mode: multiply;
+  background-blend-mode: multiply;
+}
+.reveal .paint-it-red {
+  color: #fff;
+}
+.reveal .has-dark-background .icon.stroked path,
+.reveal section.background-shade-dark .icon.stroked path,
+.reveal section.light-foreground .icon.stroked path {
+  stroke: #fff !important;
+}
+.reveal .has-dark-background .redhat-product-logotype path,
+.reveal section.background-shade-dark .redhat-product-logotype path,
+.reveal section.light-foreground .redhat-product-logotype path {
+  fill: #ffffff;
+}
+.reveal .has-dark-background text.logotext,
+.reveal section.background-shade-dark text.logotext,
+.reveal section.light-foreground text.logotext,
+.reveal .has-dark-background .logotext text,
+.reveal section.background-shade-dark .logotext text,
+.reveal section.light-foreground .logotext text,
+.reveal .has-dark-background path.logotext,
+.reveal section.background-shade-dark path.logotext,
+.reveal section.light-foreground path.logotext,
+.reveal .has-dark-background path.logotype,
+.reveal section.background-shade-dark path.logotype,
+.reveal section.light-foreground path.logotype,
+.reveal .has-dark-background .logotext path,
+.reveal section.background-shade-dark .logotext path,
+.reveal section.light-foreground .logotext path {
+  fill: #fff !important;
+}
+.reveal .has-dark-background .closing-logo .logotext,
+.reveal section.background-shade-dark .closing-logo .logotext,
+.reveal section.light-foreground .closing-logo .logotext,
+.reveal .has-dark-background .redhat-logo .logotext,
+.reveal section.background-shade-dark .redhat-logo .logotext,
+.reveal section.light-foreground .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .icon.stroked path {
+  stroke: currentcolor;
+}
+.reveal .has-light-background .redhat-logo .logotext,
+.reveal .has-light-background .redhat-logo .logohat {
+  fill: #000000 !important;
+}
+.reveal .sl-block-content ol li {
+  position: relative;
+  padding-bottom: 0.5em;
+}
+.reveal .sl-block-content ol li > p:first-child {
+  margin: 0;
+}
+.reveal .sl-block-content ol > li::before {
+  margin-left: -2.5em;
+}
+.reveal .sl-block-content > ol > li:before {
+  float: left;
+  text-align: center;
+  box-shadow: inset 0 0 0 0.1em;
+  border-radius: 50%;
+}
+.reveal .sl-block-content ol {
+  counter-reset: section;
+  list-style-type: none;
+  margin: 0 0 0 2.5em;
+  display: block;
+}
+.reveal .sl-block-content ol ol {
+  margin-top: 0.5em;
+}
+.reveal .sl-block-content ol > li:before {
+  font-weight: 400;
+  display: inline-block;
+  width: 1.75em;
+  height: 1.75em;
+  line-height: 1.75em;
+  text-align: center;
+  letter-spacing: 0;
+  font-size: 0.75em;
+  margin: 0 0.75em 0 -2.5em;
+  counter-increment: section;
+  content: counters(section, ".") " ";
+  white-space: nowrap;
+}
+.reveal .sl-block-content > ol > li ol li:before {
+  opacity: 0.5;
+  text-align: left;
+  box-shadow: none;
+  letter-spacing: 0.1em;
+}
+.reveal .sl-block-content > ol > li > ol > li > ol > li:before {
+  width: 4em;
+  left: -3em;
+  font-size: 0.75em;
+}
+.reveal .has-dark-background .sl-block-content > ol > li:before {
+  color: currentcolor;
+  background-color: rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 0 0.2em rgba(0, 0, 0, 0.2);
+  font-weight: 500;
+  letter-spacing: -0.05em;
+}
+.reveal .sl-block-content > ol ol ol li:before {
+  opacity: 1;
+  font-size: 0.55em !important;
+  width: 3.5em !important;
+}
+.reveal .sl-block-content > ol ol ol {
+  margin-left: 1.5em !important;
+}
+.reveal .uppercase {
+  text-transform: uppercase;
+}
+.reveal .sl-block[data-block-type="text"] > .initial h1,
+.reveal .sl-block[data-block-type="text"] > .initial h2,
+.reveal .sl-block[data-block-type="text"] > .initial h3 {
+  text-transform: initial;
+}
+.reveal .force-mono text,
+.reveal .force-mono tspan,
+.reveal .force-mono polygon,
+.reveal .force-mono path,
+.reveal .force-mono rect,
+.reveal .force-mono ellipse {
+  fill: currentcolor !important;
+}
+.reveal .force-red .stroked path {
+  stroke: #c00;
+}
+.reveal .force-red,
+.reveal .force-red text,
+.reveal .force-red tspan,
+.reveal .force-red polygon,
+.reveal .force-red path,
+.reveal .force-red rect,
+.reveal .force-red ellipse {
+  color: #c00;
+  fill: currentcolor !important;
+}
+.reveal .force-red .stroked {
+  fill: none;
+  stroke: #c00;
+}
+.reveal .background-shade-dark .sl-block {
+  color: #fff;
+}
+.reveal .dark-foreground text.logotext,
+.reveal section.background-shade-light text.logotext,
+.reveal section.dark-foreground text.logotext,
+.reveal .dark-foreground .logotext text,
+.reveal section.background-shade-light .logotext text,
+.reveal section.dark-foreground .logotext text,
+.reveal .dark-foreground path.logotext,
+.reveal section.background-shade-light path.logotext,
+.reveal section.dark-foreground path.logotext,
+.reveal .dark-foreground path.logotype,
+.reveal section.background-shade-light path.logotype,
+.reveal section.dark-foreground path.logotype,
+.reveal .dark-foreground .logotext path,
+.reveal section.background-shade-light .logotext path,
+.reveal section.dark-foreground .logotext path,
+.reveal .dark-foreground .product,
+.reveal section.background-shade-light .product,
+.reveal section.dark-foreground .product {
+  fill: currentcolor !important;
+}
+.reveal .dark-foreground .redhat-logo .logotext,
+.reveal section.background-shade-light .redhat-logo .logotext,
+.reveal section.dark-foreground .redhat-logo .logotext {
+  fill: currentcolor !important;
+}
+.reveal .slide-background.background-shade-dark:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(40, 40, 40, 0.8);
+}
+.reveal .slide-background.background-shade-light:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.reveal .slides section {
+  text-align: left;
+}
+.reveal .slides section h1 {
+  line-height: 1em;
+  font-weight: 700 ;
+  font-size: 3em ;
+}
+.reveal .slides section h2 {
+  font-size: 2em;
+  font-weight: 400 ;
+  line-height: 1.15em;
+}
+.reveal .slides section h3 {
+  font-weight: 700 ;
+  font-size: 1em ;
+  line-height: 1.25em;
+}
+.reveal .slides section p {
+  margin-bottom: 0.5em;
+}
+.reveal .slides section blockquote {
+  font-style: normal;
+  box-shadow: none;
+}
+.reveal .progress {
+  background-color: transparent;
+}
+.reveal .progress span {
+  background-color: #5e6a71;
+}
+.reveal .absolute-element svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+.reveal .icon.stroked {
+  width: 282px;
+  height: 282px;
+}
+.reveal .icon.stroked.icon-arrow path {
+  stroke-width: 4px !important;
+}
+.reveal .icon.stroked path {
+  fill: none;
+  stroke-width: 1.5px;
+  transition-delay: 0.5s !important;
+  stroke-dashoffset: 0;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: currentcolor;
+}
+.reveal .icon.stroked path.long {
+  stroke-dasharray: 420,420;
+  transition: 2.5s all ease;
+}
+.reveal .icon.stroked path.longer {
+  stroke-dasharray: 512,512;
+  transition: 2.5s all ease;
+}
+.reveal .icon.stroked path.short {
+  stroke-dasharray: 90,90;
+  transition: 5s all ease;
+}
+.reveal .icon.stroked path.shortest {
+  stroke-dasharray: 5,5;
+  transition: 2s all ease;
+}
+.reveal .icon.stroked path.round {
+  stroke-linecap: round ;
+  stroke-linejoin: round ;
+}
+.reveal .icon.stroked path.virtual {
+  transition: 0.5s all ease;
+  stroke-dasharray: 1.1, 3;
+  stroke-linecap: round ;
+}
+.reveal .icon.stroked path.dashed {
+  stroke-dasharray: 3, 3;
+}
+.reveal .icon.stroked path.hand {
+  stroke-linecap: round;
+}
+.reveal .present path.virtual {
+  -webkit-animation: virtual-outline 60s infinite linear;
+  -moz-animation: virtual-outline 60s infinite linear;
+  animation: virtual-outline 60s infinite linear;
+}
+@-webkit-keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+@-moz-keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+@keyframes virtual-outline {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: 512;
+  }
+}
+.reveal a {
+  box-shadow: 0 0.066666em;
+}
+.reveal .overview section.present {
+  border: 12px solid white !important;
+  box-shadow: 0 0 0 10px white, inset 0 0 0 6px rgba(0, 0, 0, 0.2);
+}
+.reveal .rh-pattern {
+  width: 256px;
+  height: 256px;
+}
+.reveal .rh-pattern path {
+  transition: all 0.5s ease;
+}
+.reveal .future .rh-pattern path {
+  stroke-dasharray: 0, 85 !important;
+}
+.reveal .present .rh-pattern path {
+  stroke-dasharray: 80, 0 !important;
+}
+.reveal div[data-block-type="snippet"] .sl-block-content > svg,
+.reveal div[data-block-type="snippet"] > .sl-block-content > svg,
+.reveal div[data-block-type="snippet"] .icon,
+.reveal div[data-block-type="snippet"] .product {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal div[data-block-type="snippet"] .sl-block-content > svg:not(:last-child) {
+  position: relative;
+}
+.reveal div[data-block-type="snippet"] .icon {
+  top: -15%;
+  right: -15%;
+  bottom: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+}
+.reveal div[data-block-type="snippet"] {
+  min-width: 60px !important;
+}
+.reveal div[data-block-type="text"] {
+  font-size: 20px;
+}
+.reveal .triangle-element,
+.reveal .triangle-element * {
+  user-select: none;
+}
+.reveal .has-light-background .closing-logo.logotype path {
+  fill: black !important;
+}
+@-webkit-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@-moz-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@-o-keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+@keyframes closing-animation {
+  0% {
+    -webkit-transform: scale(4) translate(40%);
+    transform: scale(4) translate(40%);
+    opacity: 0;
+  }
+  80% {
+    -webkit-transform: scale(1) translate(30%);
+    transform: scale(1) translate(30%);
+  }
+}
+.reveal .present .closing-logo.icon {
+  -webkit-animation: closing-animation 1.5s 1;
+  -moz-animation: closing-animation 1.5s 1;
+  -o-animation: closing-animation 1.5s 1;
+  animation: closing-animation 1.5s 1;
+}
+.reveal .present .closing-logo.logotype {
+  -webkit-animation: closing-text-animation 1.8s 1;
+  -moz-animation: closing-text-animation 1.8s 1;
+  -o-animation: closing-text-animation 1.8s 1;
+  animation: closing-text-animation 1.8s 1;
+}
+@-webkit-keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+@-moz-keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+@keyframes closing-text-animation {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+  }
+  70% {
+    -webkit-transform: translate(-10%);
+    transform: translate(-10%);
+    opacity: 0;
+  }
+  100% {
+    transform: none;
+    opacity: 1;
+    -webkit-transform: none;
+  }
+}
+.reveal .brand-pattern-paths path,
+.reveal .pattern-path {
+  stroke-width: 1;
+  fill: none;
+}
+.reveal .brand-pattern-paths path {
+  fill: none !important;
+}
+.reveal pattern {
+  patterntransform: scale(2) !important;
+}
+.reveal pattern.normal use {
+  stroke: currentcolor;
+  fill: none;
+}
+.reveal pattern.light use {
+  stroke: #fff !important;
+  fill: none;
+}
+.reveal pattern.dark use {
+  stroke: #000 !important;
+  fill: none;
+}
+.reveal .brand-pattern {
+  min-width: 40px;
+  min-height: 40px;
+  position: absolute;
+  top: 0 ;
+  left: 0 ;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .brand-pattern path,
+.reveal .brand-pattern rect {
+  width: 100% !important;
+  height: 100%;
+}
+.reveal .brand-pattern.corporate {
+  fill: url(#pattern-corporate);
+}
+.reveal #pattern-corporate-2 use {
+  stroke: #dd0000;
+}
+.reveal #pattern-corporate use {
+  stroke: #cc0000;
+}
+.reveal section,
+.reveal .slide-background {
+  -webkit-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.reveal .slides > section.transition-slide,
+.reveal .slides > section.transition-slide + section.future,
+.reveal .slides > section.transition-slide + section.present,
+.reveal .backgrounds > .slide-background.transition-slide,
+.reveal .backgrounds > .slide-background.transition-slide + .slide-background.future,
+.reveal .backgrounds > .slide-background.transition-slide + .slide-background.present {
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-slide {
+  opacity: 1 ;
+}
+.reveal .backgrounds > .slide-background.transition-slide.past {
+  z-index: 99;
+  -webkit-transform: translate(-100%, 0);
+  -ms-transform: translate(-100%, 0);
+  transform: translate(-100%, 0);
+}
+.reveal .backgrounds > .slide-background.transition-slide.future,
+.reveal .backgrounds > .slide-background.transition-slide.present + .slide-background.future {
+  -webkit-transform: translate(100%, 0);
+  -ms-transform: translate(100%, 0);
+  transform: translate(100%, 0);
+}
+.reveal .slides > section.transition-slide.past {
+  z-index: 99;
+  -webkit-transform: translate(-150%, 0);
+  -ms-transform: translate(-150%, 0);
+  transform: translate(-150%, 0);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-slide.future,
+.reveal .slides > section.transition-slide.future + section {
+  -webkit-transform: translate(150%, 0);
+  -ms-transform: translate(150%, 0);
+  transform: translate(150%, 0);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-slide-up,
+.reveal .slides > section.transition-slide-up + section.future,
+.reveal .slides > section.transition-slide-up + section.present,
+.reveal .backgrounds > .slide-background.transition-slide-up,
+.reveal .backgrounds > .slide-background.transition-slide-up + .slide-background.future .backgrounds > .slide-background.transition-slide-up + .slide-background.present {
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-slide-up {
+  opacity: 1 ;
+}
+.reveal .backgrounds > .slide-background.transition-slide-up.past {
+  z-index: 99;
+  -webkit-transform: translate(0, -100%);
+  -ms-transform: translate(0, -100%);
+  transform: translate(0, -100%);
+}
+.reveal .backgrounds > .slide-background.transition-slide-up.future,
+.reveal .backgrounds > .slide-background.transition-slide-up.present + .slide-background.future {
+  -webkit-transform: translate(0, 100%);
+  -ms-transform: translate(0, 100%);
+  transform: translate(0, 100%);
+}
+.reveal .slides > section.transition-slide-up.past {
+  z-index: 99;
+  -webkit-transform: translate(0, -150%);
+  -ms-transform: translate(0, -150%);
+  transform: translate(0, -150%);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-slide-up.future,
+.reveal .slides > section.transition-slide-up.present + section {
+  -webkit-transform: translate(0, 150%);
+  -ms-transform: translate(0, 150%);
+  transform: translate(0, 150%);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-zoom-in,
+.reveal .slides > section.transition-zoom-in + section.future,
+.reveal .slides > section.transition-zoom-in + section.present,
+.reveal .backgrounds > .slide-background.transition-zoom-in,
+.reveal .backgrounds > .slide-background.transition-zoom-in + .slide-background.future .backgrounds > .slide-background.transition-zoom-in + .slide-background.present {
+  -webkit-transition: all 1s ease  !important;
+  -moz-transition: all 1s ease  !important;
+  transition: all 1s ease  !important;
+}
+.reveal .backgrounds > .slide-background.transition-zoom-in.past {
+  opacity: 0 !important;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(0.1 0.5);
+  transform: scale(1.5);
+}
+.reveal .backgrounds > .slide-background.transition-zoom-in.future,
+.reveal .backgrounds > .slide-background.transition-zoom-in.present + .slide-background.future {
+  opacity: 0 !important;
+  -webkit-transform: scale(0.01);
+  -ms-transform: scale(0.01);
+  transform: scale(0.01);
+}
+.reveal .past {
+  z-index: -1;
+  opacity: 0 !important;
+}
+.reveal .present + .slide-background.future {
+  z-index: 99;
+}
+.reveal .slides > section.transition-zoom-in.past {
+  z-index: 99;
+  -webkit-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  transform: scale(1.5);
+  visibility: hidden;
+}
+.reveal .slides > section.transition-zoom-in.future {
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  visibility: hidden;
+}
+@-webkit-keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: 0.5px;
+  }
+}
+@-moz-keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: 0.5px;
+  }
+}
+@keyframes icon-animation-long {
+  0% {
+    stroke-dashoffset: 420;
+    stroke-width: 0.5px;
+  }
+}
+@-webkit-keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+@-moz-keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+@keyframes icon-animation-short {
+  0% {
+    stroke-dashoffset: 90;
+  }
+}
+.reveal .present .animate.icon.stroked path,
+.reveal .present .animate .icon.stroked path,
+.reveal .fragment .icon.stroked path {
+  animation: 0;
+  -moz-animation: 0;
+  -webkit-animation: 0;
+  display: none;
+}
+.reveal .present .animate.icon.stroked path.long,
+.reveal .present .animate .icon.stroked path.long,
+.reveal .fragment.visible .icon.stroked path.long {
+  display: block;
+  stroke-width: 2px ;
+  -webkit-animation: icon-animation-long 3.5s 0.5s 1;
+  -moz-animation: icon-animation-long 3.5s 0.5s 1;
+  animation: icon-animation-long 3.5s 0.5s 1;
+}
+.reveal .present .animate.icon.stroked path.short,
+.reveal .present .animate .icon.stroked path.short,
+.reveal .fragment.visible .icon.stroked path.short {
+  display: block;
+  -webkit-animation: icon-animation-short 3.5s 0.5s 1 !important;
+  -moz-animation: icon-animation-short 3.5s 0.5s 1 !important;
+  animation: icon-animation-short 3.5s 0.5s 1 !important;
+}
+.reveal .triangle-element {
+  transition: all 0.4s cubic-bezier(0.21, 0.9, 0.55, 1) 5s;
+}
+.reveal.reveal:hover .triangle-element {
+  transition: all 1s cubic-bezier(0.21, 0.9, 0.55, 1.16) 0s !important;
+  top: 100% !important;
+  left: 100% !important;
+  opacity: 0.95;
+}
+.reveal .has-dark-background .only-dark {
+  display: none;
+}
+.reveal .has-light-background .only-light {
+  display: none;
+}
+.reveal .thinner .icon.stroked path {
+  stroke-width: 1px !important;
+}
+.reveal .thinnest .icon.stroked path {
+  stroke-width: 0.05em !important;
+}
+.reveal .thicker .icon.stroked path {
+  stroke-width: 3px !important;
+}
+.reveal .thickest .icon.stroked path {
+  stroke-width: 4px !important;
+}
+.reveal .angle {
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.reveal .rangle {
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.reveal .sl-block > .vertical {
+  -ms-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+.reveal .skewed {
+  transition: all 1s cubic-bezier(0.13, 0.81, 0.08, 1);
+  -moz-transform: skew(-45deg, 0);
+  -ms-transform: skew(-45deg, 0);
+  -webkit-transform: skew(-45deg, 0);
+  transform: skew(-45deg, 0);
+}
+.reveal .future .skewed {
+  margin-left: -800%;
+  opacity: 0;
+}
+.reveal .past .skewed {
+  margin-left: 800%;
+  opacity: 0;
+}
+.reveal .item-label,
+.reveal .item-box {
+  letter-spacing: 0em;
+  font-weight: 500;
+}
+.reveal .epic-content-box {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.reveal .has-dark-background .epic-content-box {
+  box-shadow: inset 0 0 0.51em rgba(0, 0, 0, 0.25), 0 0.05em 0.05em rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.15);
+}
+.reveal .has-light-background .epic-content-box {
+  box-shadow: inset 0 0 0.2em rgba(255, 255, 255, 0.5), 0 0.06666em 0.555em 0 rgba(0, 0, 0, 0.12);
+}
+.reveal .controls {
+  bottom: 1%;
+  right: 1%;
+}
+.reveal .controls button {
+  opacity: 0;
+}
+.reveal .controls button.enabled {
+  opacity: 1;
+}
+.reveal .controls {
+  opacity: 0 !important;
+  transition: opacity 0.5s ease 4.8s, transform 0.5s ease 4.8s;
+  transform: scale(0.4);
+}
+.reveal.reveal:hover .controls {
+  transform: scale(1);
+  opacity: 1 !important;
+  transition: opacity 0.5s ease 0s, transform 0.5s ease 0s;
+}
+.reveal .backgrounds {
+  transition-property: height;
+  transition-duration: 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+.reveal .complex-logo {
+  min-height: 70px;
+  min-width: 70px;
+  width: 100%;
+}
+.reveal .complex-logo,
+.reveal .complex-logo svg,
+.reveal .complex-logo > div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.reveal .complex-logo > div.line-icon,
+.reveal .complex-logo svg > div.line-icon,
+.reveal .complex-logo > div > div.line-icon,
+.reveal .complex-logo > div.logomark,
+.reveal .complex-logo svg > div.logomark,
+.reveal .complex-logo > div > div.logomark {
+  transform-origin: 12% 50%;
+}
+.reveal .animated .complex-logo div {
+  transition: all 0.5s ease;
+}
+.reveal .animated .complex-logo div.line-icon {
+  transition-delay: 2s;
+}
+.reveal .animated .complex-logo div.line-icon path {
+  transition: all 1s ease 0.52s;
+  stroke-dasharray: 100 ,10;
+}
+.reveal .animated .complex-logo div.event-name {
+  transition-delay: 1s;
+}
+.reveal .animated .complex-logo div.location {
+  transition-delay: 1.4s;
+}
+.reveal .future .animated .complex-logo > div {
+  transition: none;
+}
+.reveal .future .animated .complex-logo > div.line-icon path {
+  stroke-dasharray: 0 ,100;
+  transition: none;
+}
+.reveal .future .animated .complex-logo {
+  /*.line-icon{transform:rotate(30deg); opacity:0;}*/
+}
+.reveal .future .animated .complex-logo .logomark {
+  transform: translate(0, -20%);
+}
+.reveal .future .animated .complex-logo .location {
+  transform: translate(0, 0.5em);
+  opacity: 0;
+}
+.reveal .future .animated .complex-logo .event-name {
+  opacity: 0;
+  transform: translate(-0.6em, 0);
+}
+.reveal .lowercase {
+  text-transform: lowercase;
+}
+.reveal .pop-in.fragment {
+  -webkit-transform: scale(0.2);
+  -moz-transform: scale(0.2);
+  -ms-transform: scale(0.2);
+  transform: scale(0.2);
+  -webkit-transition: 2s ease 0.25s;
+  -moz-transition: 2s ease 0.25s;
+  -ms-transition: 2s ease 0.25s;
+  transition: 2s ease 0.25s;
+  -webkit-animation-delay: 0.66s;
+  -moz-animation-delay: 0.66s;
+  -ms-animation-delay: 0.66s;
+  animation-delay: 0.66s;
+}
+.reveal .pop-in.fragment.visible {
+  -webkit-transform: scale(1);
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+.reveal .pop-in.fragment.current-fragment {
+  color: #c22;
+}
+.reveal .grow-width {
+  -webkit-transition: all 0.5s ease 0.2s;
+  -moz-transition: all 0.5s ease 0.2s;
+  -o-transition: all 0.5s ease 0.2s;
+  -ms-transition: all 0.5s ease 0.2s;
+  transition: all 0.5s ease 0.2s;
+}
+.reveal .future .grow-width {
+  width: 0% !important;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+.reveal .stampit {
+  -webkit-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  -moz-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  -ms-transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+  transition: all 1s cubic-bezier(0.79, 0.53, 0.46, 1.3) 1s;
+}
+.reveal .future .stampit {
+  -webkit-transform: rotate(-12deg) scale(2);
+  -moz-transform: rotate(-12deg) scale(2);
+  -ms-transform: rotate(-12deg) scale(2);
+  transform: rotate(-12deg) scale(2);
+  -webkit-transition: none;
+  -moz-transition: none;
+  -ms-transition: none;
+  transition: none;
+  opacity: 0;
+}
+.reveal .headshot img {
+  border-radius: 50%;
+  border: 4px solid #c00 !important;
+}
+.reveal .condensed {
+  letter-spacing: 0.02em;
+}
+.reveal .condensed li {
+  margin-bottom: 1em ;
+}
+.reveal .has-light-background .sl-block .has-dark-background > svg.redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .sl-block .reversed.redhat-logo .logotext,
+.reveal .has-light-background .sl-block .reversed .redhat-logo .logotext,
+.reveal .has-light-background .sl-block .has-dark-background > .redhat-logo .logotext {
+  fill: #ffffff !important;
+}
+.reveal .has-dark-background .sl-block .reversed.redhat-logo .logotext,
+.reveal .has-dark-background .sl-block .reversed .redhat-logo .logotext,
+.reveal .has-dark-background .sl-block .has-light-background > .redhat-logo .logotext {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .has-light-background .logo .only-dark path,
+.reveal .has-light-background .mono.redhat-logo path {
+  fill: #000000 !important;
+}
+.reveal .has-dark-background .mono.redhat-logo path {
+  fill: #ffffff;
+}
+.reveal .has-dark-background .logo .only-dark {
+  display: block;
+}
+.reveal .has-light-background .logo .only-light {
+  display: block;
+}
+.reveal .has-light-background .logo .only-dark {
+  display: none;
+}
+.reveal .has-dark-background .logo .only-light {
+  display: none;
+}
+.reveal .has-light-background .reversed svg path {
+  fill: #ffffff !important;
+}
+.reveal .has-dark-background .reversed svg path {
+  fill: currentcolor;
+}
+.reveal .has-dark-background .has-light-background .logo .only-light,
+.reveal .has-dark-background .reversed .logo .only-dark {
+  display: block;
+}
+.reveal .has-light-background .has-dark-background .logo .only-dark,
+.reveal .has-light-background .logo .only-light {
+  display: block;
+}
+.reveal .has-light-background .has-dark-background .redhat-logo .only-dark,
+.reveal .has-light-background .redhat-logo .only-light {
+  fill: #ffffff !important;
+}
+.reveal .has-light-background .has-dark-background .logo .only-light,
+.reveal .has-light-background .logo .only-dark,
+.reveal .has-dark-background .has-light-background .logo .only-dark,
+.reveal .has-dark-background .logo .only-light {
+  display: none;
+}
+.reveal .future .fade-up,
+.reveal .future .fade-down,
+.reveal .future .fade-left,
+.reveal .future .fade-right,
+.reveal .future .fade-zoom {
+  -webkit-transition: none;
+  transition: none;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-up,
+.reveal .fade-up.fragment {
+  -webkit-transform: translate(0, 2em);
+  -ms-transform: translate(0, 2em);
+  transform: translate(0, 2em);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-down,
+.reveal .fade-down.fragment {
+  -webkit-transform: translate(0, -2em);
+  -ms-transform: translate(0, -2em);
+  transform: translate(0, -2em);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-left,
+.reveal .fade-left.fragment {
+  -webkit-transform: translate(2em, 0);
+  -ms-transform: translate(2em, 0);
+  transform: translate(2em, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-right,
+.reveal .fade-right.fragment {
+  -webkit-transform: translate(-2em, 0);
+  -ms-transform: translate(-2em, 0);
+  transform: translate(-2em, 0);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-zoom,
+.reveal .fade-zoom.fragment {
+  -webkit-transform: scale(0.1);
+  -ms-transform: scale(0.1);
+  transform: scale(0.1);
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+.reveal .future .fade-in {
+  transition: none;
+  opacity: 0;
+}
+.reveal .present .fade-in,
+.reveal .present .fade-up,
+.reveal .present .fade-down,
+.reveal .present .fade-left,
+.reveal .present .fade-right,
+.reveal .present .fade-zoom {
+  -webkit-transition: all 0.5s ease 0.5s;
+  transition: all 0.5s ease 0.5s;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.reveal .present .fragment.visible.fade-up,
+.reveal .present .fragment.visible.fade-down,
+.reveal .present .fragment.visible.fade-left,
+.reveal .present .fragment.visible.fade-right,
+.reveal .present .fragment.visible.fade-zoom {
+  -webkit-transform: none ;
+  -ms-transform: none ;
+  transform: none ;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+.reveal .sl-block {
+  font-family: "Overpass 2", "Hiragino Kaku Gothic", "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ Pro W3", Overpass, sans-serif !important;
+}
+.reveal .has-light-background .icon.stroked {
+  color: currentcolor;
+}
+.reveal .has-dark-background .icon.stroked path {
+  stroke: currentcolor;
+}
+.reveal .has-dark-background .only-light-background {
+  display: none !important;
+}
+.reveal .has-dark-background .only-dark-background {
+  display: block !important;
+}
+.reveal a.call-to-action:hover {
+  background-color: #d00 !important;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.05) !important;
+  text-shadow: none !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table td {
+  border-color: currentcolor !important;
+}
+.reveal .sl-block[data-block-type="snippet"] table td {
+  text-align: inherit !important;
+}
+.reveal .sl-block[data-block-type="text"] table {
+  width: 100%;
+}
+.reveal .sl-block[data-block-type="text"] table td {
+  border-color: currentcolor;
+}
+.reveal .sl-block[data-block-type="text"] table td {
+  text-align: inherit;
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person {
+  border-radius: 50%;
+  position: relative !important;
+  background-color: transparent;
+  height: auto !important;
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person:before {
+  content: "" !important;
+  display: block !important;
+  padding-top: 100% ;
+  position: relative !important ;
+  /* 4:3 aspect ratio */
+}
+.reveal.reveal .sl-block[data-block-type="image"] .person > img {
+  position: absolute ;
+  margin: 0 auto !important;
+  left: 0% ;
+  right: 0 ;
+  width: auto !important;
+  top: 0  ;
+  bottom: 0 ;
+}
+.reveal .present .delay-1 {
+  transition-delay: 0.1s;
+}
+.reveal .present .delay-2 {
+  transition-delay: 0.2s;
+}
+.reveal .present .delay-3 {
+  transition-delay: 0.3s;
+}
+.reveal .present .delay-4 {
+  transition-delay: 0.4s;
+}
+.reveal .present .delay-5 {
+  transition-delay: 0.5s;
+}
+.reveal .present .delay-6 {
+  transition-delay: 0.6s;
+}
+.reveal .present .delay-7 {
+  transition-delay: 0.7s;
+}
+.reveal .present .delay-8 {
+  transition-delay: 0.8s;
+}
+.reveal .present .delay-9 {
+  transition-delay: 0.9s;
+}
+.reveal .present .delay-10 {
+  transition-delay: 1s;
+}
+.reveal .present .delay-11 {
+  transition-delay: 1.1s;
+}
+.reveal .present .delay-12 {
+  transition-delay: 1.2s;
+}
+.reveal .present .delay-13 {
+  transition-delay: 1.3s;
+}
+.reveal .present .delay-14 {
+  transition-delay: 1.4s;
+}
+.reveal .present .delay-15 {
+  transition-delay: 1.5s;
+}
+.reveal .present .delay-16 {
+  transition-delay: 1.6s;
+}
+.reveal .present .delay-17 {
+  transition-delay: 1.7s;
+}
+.reveal .present .delay-18 {
+  transition-delay: 1.8s;
+}
+.reveal .present .delay-19 {
+  transition-delay: 1.9s;
+}
+.reveal .present .delay-20 {
+  transition-delay: 2s;
+}
+.reveal .present .delay-21 {
+  transition-delay: 2.1s;
+}
+.reveal .present .delay-22 {
+  transition-delay: 2.2s;
+}
+.reveal .present .delay-23 {
+  transition-delay: 2.3s;
+}
+.reveal .present .delay-24 {
+  transition-delay: 2.4s;
+}
+.reveal .present .delay-25 {
+  transition-delay: 2.5s;
+}
+.reveal .present .delay-26 {
+  transition-delay: 2.6s;
+}
+.reveal .present .delay-27 {
+  transition-delay: 2.7s;
+}
+.reveal .present .delay-28 {
+  transition-delay: 2.8s;
+}
+.reveal .present .delay-29 {
+  transition-delay: 2.9s;
+}
+.reveal .present .delay-30 {
+  transition-delay: 3s;
+}
+.reveal .present .delay-31 {
+  transition-delay: 3.1s;
+}
+.reveal .present .delay-32 {
+  transition-delay: 3.2s;
+}
+.reveal .present .delay-33 {
+  transition-delay: 3.3s;
+}
+.reveal .present .delay-34 {
+  transition-delay: 3.4s;
+}
+.reveal .present .delay-35 {
+  transition-delay: 3.5s;
+}
+.reveal .present .delay-36 {
+  transition-delay: 3.6s;
+}
+.reveal .present .delay-37 {
+  transition-delay: 3.7s;
+}
+.reveal .present .delay-38 {
+  transition-delay: 3.8s;
+}
+.reveal .present .delay-39 {
+  transition-delay: 3.9s;
+}
+.reveal .present .delay-40 {
+  transition-delay: 4s;
+}
+.reveal .light-foreground .sl-block * {
+  color: #fff;
+}
+.reveal .dark-foreground .sl-block * {
+  color: #000;
+}
+.reveal .has-dark-background .invert {
+  color: #000;
+}
+.reveal .has-light-background .invert * {
+  color: #fff;
+}
+.reveal .has-light-background .invert .only-light-background {
+  display: none ;
+}
+.reveal .has-light-background .invert .only-dark-background {
+  display: block !important;
+}
+.reveal .has-dark-background .invert .only-light-background {
+  display: block !important ;
+}
+.reveal .has-dark-background .invert .only-dark-background {
+  display: none !important;
+}
+.reveal .slide-number {
+  position: absolute !important;
+  opacity: 1;
+  right: 1em;
+  height: 28px;
+  min-width: 28px;
+  bottom: auto;
+  left: auto;
+  text-align: center;
+  font-size: 14px;
+  border-radius: 28px;
+  line-height: 28px;
+  color: white;
+  text-shadow: 0 0.1em 0.5em rgba(0, 0, 0, 0.4);
+  top: 1em;
+  font-family: "Overpass 2", Overpass, sans-serif;
+  font-weight: 500;
+  white-space: nowrap;
+  padding: 4px;
+  box-sizing: content-box;
+}
+.reveal .slide-number-delimiter {
+  margin: 0 1px;
+}
+html:not([data-mode="arrange"]) .reveal .present.in-3d-appear {
+  transform: translatez(0em) !important;
+  animation: none !important;
+  transition: transform 1s ease !important;
+}
+html:not([data-mode="arrange"]) .reveal .future.in-3d-appear {
+  transform: translatez(10em) rotateX(21deg) !important;
+  animation: none !important;
+}
+.reveal .no-filter img,
+.reveal .no-filter {
+  filter: none !important;
+  -webkit-filter: none !important;
+}
+.reveal .present .fade-in-slow {
+  transition: all 5s ease;
+}
+.reveal .future .fade-in-slow {
+  transition: none;
+  opacity: 0;
+}
+.reveal .redhat-logo .logotext {
+  fill: #000 !important;
+}
+.reveal .has-dark-background .redhat-logo .logotext {
+  fill: #fff !important;
+}
+.reveal [data-block-type="table"] .sl-block-content {
+  font-size: 0.75em;
+  background-color: #c00;
+  color: #fff;
+}
+.reveal [data-block-type="table"] td {
+  background-color: #e5e5e5;
+  color: #333;
+  border-color: white;
+}
+.reveal div[data-block-type="table"] th {
+  font-weight: 500;
+}
+.reveal [data-block-type="table"] tr:nth-child(odd) td {
+  background-color: #f5f5f5;
+  color: #333;
+}
+.reveal .has-dark-background > [data-block-type="table"] td {
+  background-color: #131619;
+  color: #fff;
+}
+.reveal .has-dark-background > [data-block-type="table"] tr:nth-child(odd) td {
+  background-color: #232629;
+  color: #fff;
+}
+.reveal [data-block-type="code"],
+.reveal .hljs {
+  background-color: white ;
+  color: rgba(55, 55, 55, 0.85) !important;
+}
+.reveal section .hljs {
+  background-color: white !important;
+}
+.reveal .has-dark-background [data-block-type="code"],
+.reveal .has-dark-background .hljs {
+  background-color: #012736 !important;
+  color: rgba(255, 255, 255, 0.85) !important;
+}
+.reveal [data-block-type="code"] pre {
+  letter-spacing: 0.015em;
+  line-height: 1.5em;
+}
+.reveal .has-light-background[data-block-type="code"] pre,
+.reveal [data-block-type="code"] pre {
+  background-color: white ;
+  color: currentcolor;
+  padding: 1em !important;
+}
+.reveal .has-dark-background [data-block-type="code"] pre {
+  background-color: #012736;
+}
+.reveal .hljs,
+.reveal pre,
+.reveal code {
+  font-family: 'Overpass Mono', monospace !important;
+  font-weight: 200 !important;
+}
+.reveal .hljs-literal {
+  color: #ffb612 !important;
+}
+.reveal .hljs-keyword {
+  color: #ffb612;
+  font-weight: 700 !important;
+}
+.reveal .hljs-string {
+  color: #88c639;
+  font-weight: 700;
+}
+.reveal .hljs-comment {
+  color: #94a0a7 !important;
+  font-weight: 400 !important;
+}
+.reveal .hljs-params {
+  color: #028c98;
+  font-weight: 700;
+}
+.reveal .hljs-attr {
+  color: #EC7A08 !important;
+}
+.reveal .hljs-tag {
+  color: #7F5FAE !important;
+}
+.reveal .hljs-name {
+  color: #028c98 !important;
+}
+.reveal .hljs-string {
+  color: #7f5fae !important;
+}
+.reveal .hljs-comment {
+  color: rgba(125, 125, 125, 0.65) !important;
+}
+.reveal .hljs-number {
+  color: #4e9fdd !important;
+}
+.reveal .hljs-attribute {
+  color: #ec9e34 !important;
+}
+.reveal .hljs-variable {
+  color: #4e9fdd !important;
+}
+.reveal .hljs-built_in {
+  color: #ee1122 !important;
+}
+.reveal .hljs-selector-class {
+  color: #55aab2 !important;
+}
+.reveal [data-line-end-type="line-arrow"] line,
+.reveal [data-line-start-type="line-arrow"] line,
+.reveal [data-line-end-type="line-arrow"] path {
+  stroke-linecap: round;
+  stroke-linejoin: square;
+}
+.reveal div[data-block-type="line"] line[stroke="#000000"],
+.reveal div[data-block-type="line"] path[stroke="#000000"] {
+  stroke: currentcolor;
+}
+.reveal [fill="none"] {
+  fill: none !important;
+}
+.reveal [fill="#a30000"] {
+  fill: #a00 !important;
+}
+.reveal [fill="#cc2029"],
+.reveal [fill="#cb2027"],
+.reveal [fill="#c00"] {
+  fill: #c00 !important;
+}
+.reveal [fill="#fff"] {
+  fill: #fff !important;
+}
+.reveal [fill="#6d6e70"] {
+  fill: #6d6e70 !important;
+}
+.reveal [fill="#231f20"] {
+  fill: currentcolor !important;
+}
+.reveal [fill="#efab1f"] {
+  fill: #efab1f !important;
+}
+.reveal [fill="#92d400"] {
+  fill: #92d400 !important;
+}
+.reveal .has-dark-background [fill="#6d6e70"] {
+  fill: #266272 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #555 !important;
+}
+.reveal .has-dark-background [fill="#fff"] {
+  fill: #333 !important;
+}
+.reveal .has-dark-background [stroke="#231f20"] {
+  stroke: currentcolor;
+}
+.reveal .has-dark-background [fill="#221F1F"],
+.reveal .has-dark-background [fill="#221f1f"],
+.reveal .has-dark-background [fill="#231F20"],
+.reveal .has-dark-background [fill="#010101"] {
+  fill: white !important;
+}
+.reveal [data-inline-svg="true"] img {
+  display: none;
+}
+.reveal .corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: 8;
+}
+.reveal .corner svg {
+  transition: all 0.75s ease 5s;
+}
+
+		</style>
+
+		<!-- User CSS -->
+		<style id="user-css-output" type="text/css">
+			.reveal .slides section h1 {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 36pt;
+  font-weight: bold;
+  text-transform: none;
+}
+.reveal .slides section h2 {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 26pt;
+  font-weight: bold;
+  text-transform: none;
+  padding-bottom: 24px;
+}
+.reveal .slides section h3 {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 20pt;
+  font-weight: bold;
+  text-transform: none;
+  padding-top: 14px;
+}
+.reveal .slides section {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 16pt;
+}
+.reveal .slides section li {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 16pt;
+}
+.reveal .slides section table {
+  border: solid;
+  border-color: black;
+}
+.reveal .slides section td {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 14pt;
+}
+.reveal .slides section th {
+  font-family: Overpass, Open Sans, "Helvetica";
+  font-size: 14pt;
+  border: solid;
+  border-color: black;
+}
+.reveal .slides section code {
+  font-family: Overpass mono;
+  font-size: 10pt;
+  color: black;
+  background-color: #d8e1e9;
+  border: solid;
+}
+.reveal .slides section audio {
+  position: absolute;
+  left: 900px;
+  width: 300px;
+  z-index: 99;
+}
+.reveal .slides section span.mono {
+  font-family: Overpass mono;
+  font-size: 16pt;
+  color: black;
+  background-color: #d8e1e9;
+}
+
+		</style>
+	</head>
+	<body class="reveal-viewport theme-font-overpass2 theme-color-no-color">
+		<div class="reveal">
+			<div class="slides">
+				<section data-background-color="rgb(156,0,0)" data-background-image="gpte-course-template-1/32fa01ef1b64201650bdc7d29ce7c22c.svg" data-id="74e89f8adacb9ad7fdac46354f07c59d"><div class="sl-block" data-block-type="text" style="height: auto; width: 807px; left: 160px; top: 291px;" data-block-id="89810c3d73fbeecc61bc2355089b926b"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;" data-has-custom-html="">
+<h1 dir="ltr" style="line-height: 1.2; margin-top: 0pt; margin-bottom: 0pt;"><span id="docs-internal-guid-6ceb9dc0-7fff-b350-54c3-68f525598959" style="font-weight:normal;"><span style=' font-family: "Proxima Nova"; color: rgb(255, 255, 255); background-color: transparent; font-weight: 700; font-style: normal; font-variant: normal; white-space: pre-wrap;'>Advanced Agile Integration</span></span></h1>
+
+<div> </div>
+
+<h2 style="font-size: 1.5em;">Introduction</h2></div></div>
+<div class="sl-block" data-block-type="image" style="width: 360px; height: 122.4px; left: 0px; top: 0px; min-width: 4px; min-height: 4px;" data-block-id="26116967cc1b79c79fe5aebc151efbca"><div class="sl-block-content" style="z-index: 11;" data-inline-svg="true">
+<img data-natural-width="500" data-natural-height="170" data-lazy-loaded="" style="" data-src="gpte-course-template-1/bfa11a84cdd2fc0f50cb6fb54942bd62.svg"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 613 145" height="170" width="500" class="redhat-logo"><path class="logohat" style="fill:#fff;" d="M127.47,83.49c12.51,0,30.61-2.58,30.61-17.46a14,14,0,0,0-.31-3.42l-7.45-32.36c-1.72-7.12-3.23-10.35-15.73-16.6C124.89,8.69,103.76.5,97.51.5,91.69.5,90,8,83.06,8c-6.68,0-11.64-5.6-17.89-5.6-6,0-9.91,4.09-12.93,12.5,0,0-8.41,23.72-9.49,27.16A6.43,6.43,0,0,0,42.53,44c0,9.22,36.3,39.45,84.94,39.45M160,72.07c1.73,8.19,1.73,9.05,1.73,10.13,0,14-15.74,21.77-36.43,21.77C78.54,104,37.58,76.6,37.58,58.49a18.45,18.45,0,0,1,1.51-7.33C22.27,52,.5,55,.5,74.22c0,31.48,74.59,70.28,133.65,70.28,45.28,0,56.7-20.48,56.7-36.65,0-12.72-11-27.16-30.83-35.78"></path><path class="logotext" style="fill:#fff;" d="M579.74,92.8c0,11.89,7.15,17.67,20.19,17.67a52.11,52.11,0,0,0,11.89-1.68V95a24.84,24.84,0,0,1-7.68,1.16c-5.37,0-7.36-1.68-7.36-6.73V68.3h15.56V54.1H596.78v-18l-17,3.68V54.1H568.49V68.3h11.25Zm-53,.32c0-3.68,3.69-5.47,9.26-5.47a43.12,43.12,0,0,1,10.1,1.26v7.15a21.51,21.51,0,0,1-10.63,2.63c-5.46,0-8.73-2.1-8.73-5.57m5.2,17.56c6,0,10.84-1.26,15.36-4.31v3.37h16.82V74.08c0-13.56-9.14-21-24.39-21-8.52,0-16.94,2-26,6.1l6.1,12.52c6.52-2.74,12-4.42,16.83-4.42,7,0,10.62,2.73,10.62,8.31v2.73a49.53,49.53,0,0,0-12.62-1.58c-14.31,0-22.93,6-22.93,16.73,0,9.78,7.78,17.24,20.19,17.24m-92.44-.94h18.09V80.92h30.29v28.82H506V36.12H487.93V64.41H457.64V36.12H439.55ZM370.62,81.87c0-8,6.31-14.1,14.62-14.1A17.22,17.22,0,0,1,397,72.09V91.54A16.36,16.36,0,0,1,385.24,96c-8.2,0-14.62-6.1-14.62-14.09m26.61,27.87h16.83V32.44l-17,3.68V57.05a28.3,28.3,0,0,0-14.2-3.68c-16.19,0-28.92,12.51-28.92,28.5a28.25,28.25,0,0,0,28.4,28.6,25.12,25.12,0,0,0,14.93-4.83ZM320,67c5.36,0,9.88,3.47,11.67,8.83H308.47C310.15,70.3,314.36,67,320,67M291.33,82c0,16.2,13.25,28.82,30.28,28.82,9.36,0,16.2-2.53,23.25-8.42l-11.26-10c-2.63,2.74-6.52,4.21-11.14,4.21a14.39,14.39,0,0,1-13.68-8.83h39.65V83.55c0-17.67-11.88-30.39-28.08-30.39a28.57,28.57,0,0,0-29,28.81M262,51.58c6,0,9.36,3.78,9.36,8.31S268,68.2,262,68.2H244.11V51.58Zm-36,58.16h18.09V82.92h13.77l13.89,26.82H292l-16.2-29.45a22.27,22.27,0,0,0,13.88-20.72c0-13.25-10.41-23.45-26-23.45H226Z"></path></svg>
+</div></div></section>
+<section data-id="2f2c70b435fc1ff15590b3e46c337043" data-background-color="#ffffff"><div class="sl-block" data-block-type="text" style="height: auto; width: 880px; left: 0px; top: 0px;" data-block-id="c600a86f7b30b783e77e9d1e12629003">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11;" dir="ui" data-has-custom-html=""></div>
+</div>
+<div class="sl-block" data-block-type="text" style="height: auto; width: 960px; left: 0px; top: 0px;" data-block-id="f10b190636d874d1f0455aa7553baeaf">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;" dir="ui" data-has-custom-html="">
+<h2>Course Navigation Tips</h2>
+<ul>
+	<li>
+	<p>To receive credit for completing a module, you must click the <strong>Complete Module</strong> button on the Module Completion slide:<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	 </p>
+
+	<ul>
+		<li>
+		<p>To confirm that you received credit for completing a module, look for a check mark next to the module name on the left side of the screen</p>
+		</li>
+	</ul>
+	</li>
+	<li>
+	<p> After exiting the course, close the course's tab in your browser</p>
+
+	<ul>
+		<li>
+		<p>If your course session expires before closing the course's browser tab, your progress in the course will be lost</p>
+		</li>
+	</ul>
+	</li>
+	<li style="color:rgb(53, 64, 69)">
+	<p>To display the audio transcript, press <strong>S</strong></p>
+
+	<ul>
+		<li style="color: rgb(53, 64, 69);">
+		<p>If the transcript does not display, click the slide and press <strong>S</strong> again</p>
+		</li>
+	</ul>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" style="width: 400px; height: 133px; left: 36px; top: 161px; min-width: 4px; min-height: 4px;" data-block-id="2591bd2a79ce215d4a214cf70ba002ef">
+    <div class="sl-block-style" style="z-index: 13;">
+        <div class="sl-block-content" style="z-index: 13; border-style: solid; border-width: 1px;">
+            <img style="" data-natural-width="418" data-natural-height="139" data-lazy-loaded="" data-src="gpte-course-template-1/dcbee5530f1a813102960aa3d69e5c34.png">
+        </div>
+    </div>
+</div>
+<div class="sl-block" data-block-type="line" style="width: auto; height: auto; left: 182px; top: 272px;" data-block-id="846591df2ecd058328cd2ece6a49e1ce">
+    <div class="sl-block-content" data-line-x1="264" data-line-y1="8" data-line-x2="210" data-line-y2="-14" data-line-color="#cc0000" data-line-start-type="none" data-line-end-type="arrow" style="z-index: 14;" data-line-width="6px">
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" preserveaspectratio="xMidYMid" width="54" height="22" viewbox="210 -14 54 22"><line stroke="rgba(0,0,0,0)" stroke-width="15" x1="264" y1="8" x2="218" y2="-11"></line><line stroke="#cc0000" stroke-width="6" x1="264" y1="8" x2="218" y2="-11"></line><polygon fill="#cc0000" transform="translate(218,-11) rotate(-67.834)" points="0,-9 9,9 -9,9"></polygon></svg>
+    </div>
+</div></section>
+<section data-id="3ccd58d15cce66f4f3ec866bc5c40462" data-background-color="#ffffff"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="ae9f1218c0b830c7d41bb4758346f503"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2 style="text-align:left">Agenda</h2>
+<ul>
+	<li>
+	<p><span><span>Changes in Integration </span></span><span style="color:rgb(53, 64, 69); font-size:21.3333px">World</span></p>
+	</li>
+	<li>
+	<p><span><span>New Architectural Approach</span></span></p>
+	</li>
+	<li>
+	<p><span><span>Red Hat® Technology Stack</span></span></p>
+	</li>
+	<li>
+	<p><span><span>Agile Integration in Action</span></span></p>
+	</li>
+</ul>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="048159529cf8d5927171332657f1c1ca"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="51a2007f1dbf989f2bb2b14f9bcc705e">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2>Changes in Integration World</h2>
+<h3><span>Balancing Innovation and Optimization</span></h3>
+
+<p> </p>
+
+<ul>
+	<li>How do you integrate what you have today and what you need tomorrow?</li>
+</ul>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="744ceac7d414f0dfce5c67f7f91b520b" style="min-width: 4px; min-height: 4px; width: 1181px; height: 388px; left: 50px; top: 257px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="764" data-natural-height="251" style="" data-lazy-loaded="" data-src="gpte-course-template-1/3b124b9ab5ac8afd65bf69d23dfc2f9f.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="03b8827c6ed75029754a16c56fd1007b" style="height: auto; min-width: 30px; min-height: 30px; width: 143px; left: 50px; top: 497px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p>Optimize the IT you have today</p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2f87009aab2826699c0d0e953a2616ed" style="height: auto; min-width: 30px; min-height: 30px; width: 251px; left: 333px; top: 497px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><span>Integrate apps, data,<br>
+&amp; processes</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="adfc43abad7600116832a44cd9a54064" style="height: auto; min-width: 30px; min-height: 30px; width: 201px; left: 709px; top: 497px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><span><span>Add &amp; manage cloud infrastructure</span></span></p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="aa4d22cfcaf4db5ad58320a9cb36e7d3" style="height: auto; min-width: 30px; min-height: 30px; width: 182px; left: 1075px; top: 497px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:center"><span>Build more modern applications</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="af6d8fda53db6b64680e864f6c221857"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="d7494ef60e4917316d86af7a5726511b">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3>Integration is Critical for Modern Business</h3>
+
+<ul>
+	<li style="text-align:left">
+	<p><span style="color:rgb(53, 64, 69); text-align:center">Sustained competitive advantage</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="6df56beec9526180049aef7c85365dde" style="min-width: 4px; min-height: 4px; width: 691px; height: 192px; left: 294.5px; top: 264px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="690" data-natural-height="192" style="" data-lazy-loaded="" data-src="gpte-course-template-1/f16cc30eb1e071558066204af7cc01d2.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e6d530b83c6e39133c6e71c73c9bbd0a" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 340px; top: 296px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><span style="color:#ffffff"><em>"Only a small percentage of companies will gain competitive advantage from </em><u><em>SMACIT [social, mobile, analytics, cloud, and Internet of things] technologies</em></u><em>. Those that do will </em><u><em>focus less on the individual technologies and more on how they rally all those technologies, in unison, to fulfill a distinctive purpose</em></u><em>."</em></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2edd1c3b029e7bd37bd34a3dcc329569" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 360px; top: 489px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><strong>HARVARD BUSINESS REVIEW</strong></p>
+
+<p style="text-align:center"><span style="color:rgb(67, 67, 67)">Jan 2015</span></p>
+</div></div>
+</section>
+<section data-id="5bd94d11eae5eec884999e576625db7f"><div class="sl-block" data-block-type="image" data-block-id="a7e903429d946bd32950cd561de99f5c" style="min-width: 4px; min-height: 4px; width: 1167px; height: 706px; left: 57px; top: 6px;"><div class="sl-block-content" style="z-index: 11;"><img style="" data-natural-width="960" data-natural-height="581" data-lazy-loaded="" data-src="gpte-course-template-1/0cc5742abc061a474446f83c171c4ef6.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="eed9a22eea19f8aade5967a8e1b39800" style="height: auto; min-width: 30px; min-height: 30px; width: 287px; left: 737px; top: 489px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12; color: rgb(255, 255, 255);">
+<p><span style="color:white">“</span><strong>Agility</strong><span style="color:white">” is the most important business capability today.*</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="1b0ab3bc10622d691370786bc085b6f7"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="5de9a0fd377200eb5d2faa4fdb7df63f"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3 style="text-align:left">Top Integration Needs</h3>
+
+<ul>
+	<li>
+	<p>Speed, simplicity, and collaboration everywhere (from anywhere)</p>
+	</li>
+</ul>
+</div></div>
+
+
+
+<div class="sl-block" data-block-type="image" data-block-id="fa4ae72149bcc5d5632f5747db986d99" style="min-width: 4px; min-height: 4px; width: 896px; height: 413px; left: 192px; top: 235px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="657" data-natural-height="303" style="" data-lazy-loaded="" data-src="gpte-course-template-1/e7d8a2a259076ef727bfa4cd7b5a6578.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d075d791820ea1608857e4149b040d63" style="height: auto; min-width: 30px; min-height: 30px; width: 249px; left: 208px; top: 400px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>EASY-TO-USE</strong></p>
+
+<p style="text-align:center"><strong>TOOLS &amp; PROCESSES </strong></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span>Integration across the organization means getting non-technical users involved. </span></p>
+
+<p style="text-align:center"> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b8bc2d60719440e9cbad02da77f6be42" style="height: auto; min-width: 30px; min-height: 30px; width: 231px; left: 525px; top: 400px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><strong>INCREASED COLLABORATION</strong></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span>Internal AND external integration includes partners &amp; customers.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="92e55498bac7e3afe240e4b5bbc34cfc" style="height: auto; min-width: 30px; min-height: 30px; width: 185px; left: 855px; top: 394px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><strong>SPEEDY</strong></p>
+
+<p style="text-align:center"><strong>SERVICE</strong></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span>Agile development requires a fast turn-around. Create &amp; connect new apps quickly.</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="9add8d19be01569f78feeb97bf794efe"><div class="sl-block" data-block-type="text" style="height: auto; width: 973px; left: 0px; top: 1px;" data-block-id="e5e186ddc1c2baa5ccfb3359ae2c4519">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3 style="color:rgb(53, 64, 69)"><strong>Agile Teams Cannot Get Integration from Last Generation Products</strong></h3>
+
+<ul>
+	<li>
+	<p><span>Enterprise IT is undergoing fundamental change.  </span></p>
+	</li>
+	<li>
+	<p><span>To remain competitive, businesses need an integration platform capable of supporting current </span><em>and</em><span> next generation architectures.</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="2ff495c50c3d46fc7ff61e0c12f3b0c2" style="min-width: 4px; min-height: 4px; width: 1111px; height: 414px; left: 80px; top: 297px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="867" data-natural-height="323" style="" data-lazy-loaded="" data-src="gpte-course-template-1/1f7ee19a4154dfcabe9c5f33e286ec15.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="4295ac63487baaf1666613ceb79a5c21"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="0cbad0403d9553f2f06a98da56fe187c"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3><span style="font-size:26.6667px">Integration is Undergoing Rapid Change</span></h3>
+
+<p> </p>
+
+<p><strong>Previous generations of Integration</strong></p>
+
+<ul>
+	<li>
+	<p><span>Centralize integration</span></p>
+	</li>
+	<li>
+	<p><span>Centralize expertise</span></p>
+	</li>
+	<li>
+	<p><span>Use proprietary connectors</span></p>
+	</li>
+	<li>
+	<p><span>Solve the N^(N-1) complexity</span></p>
+	</li>
+</ul>
+
+<p> </p>
+
+<p><strong>Distribution, Containerization and APIs are changing everything</strong></p>
+
+<ul>
+	<li>
+	<p><span>Hundreds of apps become thousands of services</span></p>
+	</li>
+	<li>
+	<p><span>Integration can take place anywhere in the organization</span></p>
+	</li>
+	<li>
+	<p><span>Bottlenecks can be removed</span></p>
+	</li>
+	<li>
+	<p><span>Integration connects front of house and back office systems</span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8d4199bcc05aaa834eb2e7170d1fdc7c" style="min-width: 4px; min-height: 4px; width: 433px; height: 434px; left: 720px; top: 214px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="321" data-natural-height="322" style="" data-lazy-loaded="" data-src="gpte-course-template-1/dc84fdd227394d680e20ed4ea34d7cd0.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="2852657ec436eb4ad0066465d222d2ba"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="bba67023c7f7cdec91d470e5ea02cc25"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3 style="color:rgb(53, 64, 69)">Need to Integrate Apps Where Deployed</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="691b92fb30e9465fd73054f691632340" style="min-width: 4px; min-height: 4px; width: 974px; height: 333px; left: 153px; top: 172px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="883" data-natural-height="302" style="" data-lazy-loaded="" data-src="gpte-course-template-1/be54fde759fa19323684d256323854a5.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="4e5ed542737f2fe7ef66bea6ce114e8d" style="height: auto; min-width: 30px; min-height: 30px; width: 404px; left: 170px; top: 546px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;" dir="ui">
+<p style="text-align:center"><strong>There is not </strong><u><strong>one dominant </strong></u><strong>cloud</strong><span> </span><span> </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8cd31297b3872b29956886da9480f96f" style="height: auto; min-width: 30px; min-height: 30px; width: 421px; left: 690px; top: 535px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><strong>45%</strong><strong> run bespoke applications in a private cloud or are implementing within 12 months</strong><span> </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bfebd8f87a179aca11fcb3916f864979" style="height: auto; min-width: 30px; min-height: 30px; width: 705px; left: 288px; top: 655px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><strong>Source:</strong><span>  IDC InfoBrief Agile Integration for Today’s cloud-enabled enterprise, </span><br>
+<u><span style="color:rgb(0, 65, 83)"><a href="https://engage.redhat.com/agile-integration-cloud-s-201711061616" target="_blank">https://engage.redhat.com/agile-integration-cloud-s-201711061616</a></span></u><span style="color:rgb(7, 55, 99)"> </span><span> Oct 2017. </span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="4d6734690d7666987fcbee0b6f630e14"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="3bf0a5af12a9f3d76f1ae1d409c2a6fb"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3 style="color:rgb(53, 64, 69)">What Is Needed? API-Centric Integration</h3>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="8999d2a6d7b512731c88be450221da6f" style="min-width: 4px; min-height: 4px; width: 1069px; height: 454px; left: 106px; top: 188px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="859" data-natural-height="365" style="" data-lazy-loaded="" data-src="gpte-course-template-1/fdc946e7a3b1c413f761046f24031548.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="6d83c109691409e9fe3d35113edea9c0"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="28db0096d25f0b68ca510156dfc2a5e3"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3 style="color:rgb(53, 64, 69)">How Integration Is Delivered Also Needs to Change</h3>
+
+<ul>
+	<li>
+	<p>Reshaping the integration delivery model: enable DIY teams</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="6593eeb4b8f834ada0b3d8b0319a2a2a" style="min-width: 4px; min-height: 4px; width: 1100px; height: 428px; left: 90px; top: 232px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="817" data-natural-height="318" style="" data-lazy-loaded="" data-src="gpte-course-template-1/af6bb99aa118269d5d85f725be6892e6.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="39604af6e4adc662d80e615d031d70e5"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="1c7c2c3819ed1ade27fa85d6041b84d5"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Changes in Integration World</h2>
+<h3><span style="font-size:26.6667px">Move Towards API Centric Faster Integration</span></h3>
+
+<ul>
+	<li>
+	<p>Support new users, existing and new use cases - <strong>at speed</strong></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="9da05b20f302160c909a80f8e6878993" style="min-width: 4px; min-height: 4px; width: 1040px; height: 478px; left: 127px; top: 231px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="659" data-natural-height="303" style="" data-lazy-loaded="" data-src="gpte-course-template-1/18555d00c315f0267060268b08a97602.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="0d349ed6229de04226c8e1d1867a55c9" style="height: auto; min-width: 30px; min-height: 30px; width: 228px; left: 179px; top: 423px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>EASY-TO-USE</strong></p>
+
+<p style="text-align:center"><strong>TOOLS &amp; PROCESSES </strong></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span>Integration across the organization means getting non-technical users involved. </span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="df6735189d1a30f6f4c857132cf02f9b" style="height: auto; min-width: 30px; min-height: 30px; width: 280px; left: 507px; top: 423px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><strong>INCREASED COLLABORATION</strong></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span>Internal AND external integration includes partners &amp; customers.</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f207972573a5f437d0ee5bf179e633ac" style="height: auto; min-width: 30px; min-height: 30px; width: 243px; left: 880px; top: 423px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><strong>SPEEDY</strong></p>
+
+<p style="text-align:center"><strong>SERVICE</strong></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span>Agile development requires </span><span>a fast turnaround. Create &amp; connect new apps quickly.</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="2ae2438ff147e19089afc47069ddf871"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="596d16c3ed352b30e444088a97027f1b"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">New Architectural Approach</h2>
+<h3 style="color: rgb(53, 64, 69);">Agile Integration</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="817222557a23edd6909eeeb9d83c8c64" style="min-width: 4px; min-height: 4px; width: 646px; height: 484px; left: 298px; top: 156px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="984" data-natural-height="738" data-lazy-loaded="" data-src="gpte-course-template-1/04fe11a9163c0fc4797ba3baac847b42.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="ce9c1d7b592e421583d1f4c5daaeb6cc" style="height: auto; min-width: 30px; min-height: 30px; width: 326px; left: 480px; top: 662px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><strong>Digital transformation made real</strong></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="6f68db3ec20a1f7dd038222bec372f29"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="5e394b84b3939f38cfe0c89dd0034368"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">New Architectural Approach</h2>
+<h3 style="color: rgb(53, 64, 69);">Agile Integration</h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="981eab7f3f281fd777a129defed36055" style="min-width: 4px; min-height: 4px; width: 1056px; height: 177px; left: 112px; top: 226px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="914" data-natural-height="153" style="" data-lazy-loaded="" data-src="gpte-course-template-1/299116d64460fc11faed86253381e282.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5bfe05957e8f5ce574816d664e19fbb1" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 296px; top: 432px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>Organization-wide change</strong></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="fc7aaaf52f595983a809002ad709e2f0"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 1px; top: 2px;" data-block-id="f1eb610e850130a27101ab722fdb7560"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">New Architectural Approach</h2>
+<h3 style="color:rgb(53, 64, 69)">Agile Integration</h3>
+
+<ul>
+	<li>
+	<p>The 3 pillars of Agile Integration</p>
+	</li>
+	<li>
+	<p>Key foundational capabilities needed by today's enterprises</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="b1b895ee2ea10eaf2fd951d0f7b336c7" style="height: auto; min-width: 30px; min-height: 30px; width: 272px; left: 195px; top: 313px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 12;">
+<p style="text-align:center"><span style="color:white">DISTRIBUTED<br>
+INTEGRATION</span></p>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="802668108ce0aeb55f5e54dc524496e2" style="min-width: 4px; min-height: 4px; width: 1010px; height: 443px; left: 256px; top: 260px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="784" data-natural-height="344" data-lazy-loaded="" data-src="gpte-course-template-1/ed85c93db8fae5caa5fee1d89afb0d06.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="23f40b3811c1bc9098db559dd40b7f4e" style="min-width: 4px; min-height: 4px; width: 179px; height: 72px; left: 28px; top: 273px;"><div class="sl-block-content" style="z-index: 14;"><img data-natural-width="142" data-natural-height="57" style="" data-lazy-loaded="" data-src="gpte-course-template-1/7e76cd50b8d7e4256276c7ac0a85cbc6.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="fcb5eb92a0fb27440d6fec662e42e35f" style="height: auto; min-width: 30px; min-height: 30px; width: 298px; left: 256px; top: 309px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><span style="color:white">DISTRIBUTED<br>
+INTEGRATION</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="color:white">LIGHTWEIGHT</span></p>
+
+<p style="text-align:center"><span style="color:white">PATTERN BASED</span></p>
+
+<p style="text-align:center"><span style="color:white">EVENT-ORIENTED</span></p>
+
+<p style="text-align:center"><span style="color:white">COMMUNITY-SOURCED</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="color:white"><strong>FLEXIBILITY</strong></span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="6eaff8ea58fec3b026cc0f8c9f101b82" style="height: auto; min-width: 30px; min-height: 30px; width: 284px; left: 612px; top: 323px;"><div class="sl-block-style" style="z-index: 16; transform: rotate(360deg);"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align:center"><span style="color:white">CONTAINERS</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="color:white">CLOUD-NATIVE SOLUTIONS</span></p>
+
+<p style="text-align:center"><span style="color:white">LEAN ARTIFACTS, INDIVIDUALLY DEPLOYABLE</span></p>
+
+<p style="text-align:center"><span style="color:white">CONTAINER-BASED SCALING &amp; HIGH AVAILABILITY </span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="color:white"><strong>SCALABILITY</strong></span></p>
+</div></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="bea4194cc30204fd0b3ef39b3541c0ce" style="height: auto; min-width: 30px; min-height: 30px; width: 267px; left: 974px; top: 323px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p style="text-align:center"><span style="color:white">APIs</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><span style="color:white">WELL-DEFINED, REUSABLE, &amp; WELL-MANAGED<br>
+ENDPOINTS</span></p>
+
+<p style="text-align:center"><span style="color:white">ECOSYSTEM LEVERAGE</span></p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"> </p>
+
+<p style="text-align:center"><strong><span style="color:white">RE-USABILITY</span></strong></p>
+
+<p style="text-align:center"> </p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="78242baecd8f058f1569fc00b43c057c"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="0f83ab65054ef4b3d72bcfdc9024a04d"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">New Architectural Approach</h2>
+<h3 style="color: rgb(53, 64, 69);">Agile Integration</h3>
+
+<h3 style="color:rgb(53, 64, 69)"> </h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="bd0a37b4b62d23aaf45e688b947cf5c5" style="min-width: 4px; min-height: 4px; width: 176px; height: 72px; left: 0px; top: 216px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="142" data-natural-height="58" style="" data-lazy-loaded="" data-src="gpte-course-template-1/b98cb62b5e8f54529d59517c277474cf.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="2467e1ad8d8e5896d4f971d8e86538ac" style="min-width: 4px; min-height: 4px; width: 1093px; height: 432px; left: 187px; top: 216px;"><div class="sl-block-content" style="z-index: 13;"><img style="" data-natural-width="891" data-natural-height="352" data-lazy-loaded="" data-src="gpte-course-template-1/0a6e24303b4a06d300183f40116355eb.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="1fded87e46f389add27de66451939dab" style="height: auto; min-width: 30px; min-height: 30px; width: 285px; left: 276px; top: 565px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><span style="color:white">DISTRIBUTED<br>
+INTEGRATION</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f4b253d4c686966fd487a91434e554f1" style="height: auto; min-width: 30px; min-height: 30px; width: 285px; left: 603px; top: 576px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><span style="color:white">CONTAINERS</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d7b3ab7028888a9fc4d6e0552ce4eb05" style="height: auto; min-width: 30px; min-height: 30px; width: 275px; left: 940px; top: 576px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="text-align: center;"><span style="color:white">APIs</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8db0dd4915eacb2a03e1f3b7406be259" style="height: auto; min-width: 30px; min-height: 30px; width: 1149px; left: 66px; top: 690px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p style="text-align:center"><span>Photos by </span><u><span><a href="https://unsplash.com/photos/r_lSD8eSV8g?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Rokas Niparavičius</a></span></u><span>,  </span><u><span><a href="https://unsplash.com/photos/7omHUGhhmZ0?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Aatik Tasneem</a></span></u><span>,  </span><u><span><a href="https://unsplash.com/photos/6anudmpILw4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Foto Sushi</a></span></u><span>,  </span><u><span><a href="https://unsplash.com/photos/OK7VpKfbb_c?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Hunter Johnson</a></span></u><span>, </span><u><span><a href="https://unsplash.com/photos/IQR8ruNEyNU?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Diego Duarte Cereceda</a></span></u><span>,</span><u><span><a href="https://unsplash.com/photos/ayA_cvN4uEA?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Brian Fraser</a></span></u><span>  on </span><u><span><a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText" target="_blank">Unsplash</a></span></u></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="8c0bfdf1f141ba380c4b67ede336553b"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="cc58fec12a3b890a0b9d5dca08357745"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3>Agile Integration Products</h3>
+
+<ul>
+	<li>
+	<p>Strategic capabilities needed by today's enterprise</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="a13da243d1e418ebb3758af3133e034b" style="min-width: 4px; min-height: 4px; width: 176px; height: 72px; left: 0px; top: 238px;"><div class="sl-block-content" style="z-index: 18;"><img style="" data-natural-width="142" data-natural-height="58" data-lazy-loaded="" data-src="gpte-course-template-1/de8471d7e5a6e9e91b7d08dbb32c9ca1.png"></div></div>
+<div class="sl-block" data-block-type="image" data-block-id="62c05a19d2aaf4f1bee1eaa33019b09c" style="min-width: 4px; min-height: 4px; width: 1148px; height: 489px; left: 132px; top: 231px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="805" data-natural-height="343" style="" data-lazy-loaded="" data-src="gpte-course-template-1/78a15b7baa4447736c5d5e69fa2dee61.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="d1b06792aff8f39deb81727084fc790a" style="height: auto; min-width: 30px; min-height: 30px; width: 263px; left: 226px; top: 283px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">DISTRIBUTED<br>
+INTEGRATION</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"> </p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">LIGHTWEIGHT</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">PATTERN BASED</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">EVENT-ORIENTED</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">COMMUNITY-SOURCED</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f8ccc18bd47d26986182e87343c3ed7c" style="height: auto; min-width: 30px; min-height: 30px; width: 292px; left: 480px; top: 295px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;"><p>Text</p></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="c26319c8e6a728da5d7c4d3d1a00c59a" style="height: auto; min-width: 30px; min-height: 30px; width: 278px; left: 560px; top: 310px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">CONTAINERS</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"> </p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">CLOUD-NATIVE SOLUTIONS</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">LEAN ARTIFACTS, INDIVIDUALLY DEPLOYABLE</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">CONTAINER-BASED SCALING &amp; HIGH AVAILABILITY</span></p>
+
+<p> </p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8515a526e6db3e15dec749f47344dc00" style="height: auto; min-width: 30px; min-height: 30px; width: 267px; left: 907px; top: 310px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 16;">
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">APIs</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"> </p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:rgb(255, 255, 255); text-align:center">WELL-DEFINED, REUSABLE, &amp; WELL-MANAGED</span><br>
+<span style="color:rgb(255, 255, 255); text-align:center">ENDPOINTS</span></p>
+
+<p style="color:rgb(53, 64, 69); text-align:center"><span style="color:white">ECOSYSTEM LEVERAGE</span></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="e7f53a766500b3e128a059db3edec938" style="height: auto; min-width: 30px; min-height: 30px; width: 600px; left: 399px; top: 674px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 17;">
+<p style="text-align: center;"><strong>Tools &amp; processes</strong></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="50e1598f9c06bb871c584656463aa3ba"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="5e0a6c4ed44acc1cbfb95bda8cdf3f77"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3><span style="font-size:26.6667px">Red Hat Fuse</span></h3>
+
+<ul>
+	<li>
+	<p>Distributed, cloud-native integration platform</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="fa4641a19afc42b2bba284199d3fb477" style="min-width: 4px; min-height: 4px; width: 1041px; height: 414px; left: 120px; top: 234px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="802" data-natural-height="319" data-lazy-loaded="" data-src="gpte-course-template-1/9f302bee32116c697c87937cd29a8d99.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="8bb5bea4c12f9126b23afaf216b920db"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="118df4e104cbc3b0a311e5046c4a15a5"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3><span style="font-size:26.6667px">Two Dimensions of Distributed Integration</span></h3>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="a27ff09403660af448d9d857d5ef05ee" style="min-width: 4px; min-height: 4px; width: 589px; height: 403px; left: 80px; top: 210px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="424" data-natural-height="290" style="" data-lazy-loaded="" data-src="gpte-course-template-1/0c5052799ec326b7e243fb809b7dc3cd.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="2812a74173e3270098a28fe3bae1a7d7" style="height: auto; min-width: 30px; min-height: 30px; width: 425px; left: 794px; top: 246px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p><strong>WHERE INTEGRATION IS USED</strong></p>
+
+<p><span>Integration at the center or the edge of your enterprise architecture. </span></p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p> </p>
+
+<p><strong>WHO PERFORMS INTEGRATION </strong></p>
+
+<p><span>Unlocking integration capability for new categories of integrators.</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="cb749f8f8b7c155a5511eecb4ae81c0b"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="d01253947d0608a4e5d0c21480ec36ce"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<p><span style="font-size:26.6667px"><strong>Next Generation of Red Hat Fuse</strong></span></p>
+
+<ul>
+	<li>
+	<p>Three-product initiative for Fuse 7.0</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="91f40ddc490b201ebda38af6650ac68e" style="min-width: 4px; min-height: 4px; width: 982px; height: 157px; left: 90px; top: 223px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="694" data-natural-height="111" data-lazy-loaded="" data-src="gpte-course-template-1/4ce16b94e69032827103e01937b31a28.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3ef25704e8c3ff8c471ed780ae33e2f2" style="height: auto; min-width: 30px; min-height: 30px; width: 249px; left: 34px; top: 407px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>Fuse standalone</strong></p>
+
+<ul>
+	<li>
+	<p><span>Single JVM Fuse</span></p>
+	</li>
+	<li>
+	<p><span>Developer-focused</span></p>
+	</li>
+	<li>
+	<p><span>Integration where you need it</span></p>
+	</li>
+	<li>
+	<p><strong>Classic integration</strong></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="7bc9802b52727e9e72965ac2ad83bba5" style="height: auto; min-width: 30px; min-height: 30px; width: 289px; left: 459px; top: 407px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><strong>Fuse on OpenShift</strong><span><span>®</span></span></p>
+
+<ul>
+	<li>
+	<p><span>Scale</span><span>-</span><span>out Fuse</span></p>
+	</li>
+	<li>
+	<p><span>Replaces Fabric v1</span></p>
+	</li>
+	<li>
+	<p><span>Developer-focused</span></p>
+	</li>
+	<li>
+	<p><strong>Cloud</strong><strong>-</strong><strong>native</strong><strong> </strong><strong>integration</strong></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="8f240466b3e13ac2b8429e7babc151d8" style="height: auto; min-width: 30px; min-height: 30px; width: 257px; left: 880px; top: 407px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><strong>Fuse Online (iPaaS)</strong></p>
+
+<ul>
+	<li>
+	<p><span>Low/no-code UX</span></p>
+	</li>
+	<li>
+	<p><span>100% cloud-based</span></p>
+	</li>
+	<li>
+	<p><span>Integration through a browser</span></p>
+	</li>
+	<li>
+	<p><span>Fuse for the rest of us - </span></p>
+	</li>
+</ul>
+
+<p><span><strong>      a</strong><strong>d </strong><strong>h</strong><strong>oc </strong><strong>i</strong><strong>ntegration</strong></span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="800fa1230c76a63a296ce26092bc9ba5"><div class="sl-block" data-block-type="text" style="height: auto; width: 1040px; left: 2px; top: 2px;" data-block-id="c64641d33a5c0cf844f4b2ce891c8b44"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3><span style="font-size:26.6667px">Implement Hybrid Integration Platform</span></h3>
+
+<ul>
+	<li>
+	<p><span style="font-size:26.6667px">​</span><span>Single platform and toolchain across cloud environments provides consistency and flexibility for current and future deployment</span><span>s</span></p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="b6f87bc58631060cb2a0c0f0eac008f8" style="min-width: 4px; min-height: 4px; width: 1083px; height: 436px; left: 98px; top: 268px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="733" data-natural-height="295" style="" data-lazy-loaded="" data-src="gpte-course-template-1/4f2cf4adaff3fa0493eb8f9eea86b413.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="96945cfa35b69bab8d1556cca7904f2a" style="height: auto; min-width: 30px; min-height: 30px; width: 300px; left: 64px; top: 484px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>PRIVATE CLOUD</strong></p>
+
+<p style="text-align:center"><em>Deploy on-premise</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="3014ee7a9a2606d0dca6874505db8a26" style="height: auto; min-width: 30px; min-height: 30px; width: 320px; left: 480px; top: 484px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 14;">
+<p style="text-align:center"><strong>PUBLIC CLOUD</strong></p>
+
+<p style="text-align:center"><em>Deploy on public cloud provider</em></p>
+</div></div>
+<div class="sl-block" data-block-type="text" data-block-id="5fe8c2e1f1e46823a7fe541cb0313fc9" style="height: auto; min-width: 30px; min-height: 30px; width: 262px; left: 905px; top: 484px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 15;">
+<p style="text-align:center"><strong>MANAGED CLOUD</strong></p>
+
+<p style="text-align:center"><em>Deployed and managed by Red Hat</em></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="294bd9941dd2ea1ed63ceaf7da223b7a"><div class="sl-block" data-block-type="text" style="height: auto; width: 663px; left: 0px; top: 1px;" data-block-id="4a5a7ae84117d37b6537537eaff3aefa"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3><span style="font-size:26.6667px">Red Hat Fuse Online</span></h3>
+
+<p> </p>
+
+<ul>
+	<li>
+	<p>Low-code platform for cloud-native integration</p>
+	</li>
+	<li>
+	<p>Integration Platform as a Service (iPaaS) offering based on Red Hat Fuse</p>
+	</li>
+	<li>
+	<p>Web-based toolchain and runtime deployed on OpenShift</p>
+	</li>
+	<li>
+	<p>User experience focused on solving integration problems without writing code</p>
+	</li>
+</ul>
+</div></div>
+<div class="sl-block" data-block-type="image" data-block-id="bb3c1d11b495a94894c93bf082c5958a" style="min-width: 4px; min-height: 4px; width: 603px; height: 694px; left: 670px; top: 7px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="357" data-natural-height="411" style="" data-lazy-loaded="" data-src="gpte-course-template-1/6ee0d7cddd86d00aad8a5a12e8e62d94.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="9d88d066a850200ac35bbd76dead102b"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="66a998d641f73bfa2c87500e74c41a62">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3>Red Hat AMQ</h3>
+
+<ul>
+	<li>
+	<p>Event and message board integration</p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="c16ebcbcf4f25976d5d7b37a61d75ed2" style="min-width: 4px; min-height: 4px; width: 1055px; height: 447px; left: 113px; top: 249px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="802" data-natural-height="340" style="" data-lazy-loaded="" data-src="gpte-course-template-1/a21fc59a41869596aa87b1d50821b73d.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="cc808f81ef5be0c202723f2ac7216677"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="6232a952e5a925e82a31fda73906967b">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3 style="color:rgb(53, 64, 69)">Red Hat AMQ 7</h3>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="c97f0fea4cb4d9bbe75d0edda1c49cf1" style="min-width: 4px; min-height: 4px; width: 980px; height: 474px; left: 150px; top: 179px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="767" data-natural-height="371" style="" data-lazy-loaded="" data-src="gpte-course-template-1/ba2927dfeb35563d938ceeae948e8d3a.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="ef02211f823871086e15b18c8004eeca"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="2df3c882dff8141ba1e6da237d06455c">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3><strong>Red Hat 3scale API Management</strong></h3>
+
+<p> </p>
+
+<ul>
+	<li>
+	<p><span>Enabling API </span><span>f</span><span>irst</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="802df0a0f6103ade47bc61ba99bbf25b" style="min-width: 4px; min-height: 4px; width: 1050px; height: 431px; left: 115px; top: 255px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="807" data-natural-height="331" style="" data-lazy-loaded="" data-src="gpte-course-template-1/0089d9fa054c3bcc2b51a42b785840a9.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="c80b291cb3b05f266378d9850447877b"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="90bd975bc278c546eb0a42ec15a7d56e">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Red Hat Technology Stack</h2>
+<h3>Red Hat API Management</h3>
+
+<ul>
+	<li>
+	<p><span>v2.</span><span>4</span><span>: OpenShift On-premise + OpenID Connect</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="17643e6f3562fe1f67565574f8cbf468" style="min-width: 4px; min-height: 4px; width: 951px; height: 485px; left: 165px; top: 190px;"><div class="sl-block-content" style="z-index: 12;"><img style="" data-natural-width="834" data-natural-height="425" data-lazy-loaded="" data-src="gpte-course-template-1/f00e1af06f62a7f2a931e9ba1420cc2c.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="36479e948b65a66bc14b513cae0a07b8"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="6115aa2815776e3e87288fae8a3f53b7">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Agile Integration in Action</h2>
+<h3 style="color:rgb(53, 64, 69)">Common Use Cases</h3>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="9614f2bbdcb339dd24e6387d6adc067b" style="min-width: 4px; min-height: 4px; width: 848px; height: 520px; left: 216px; top: 172px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="658" data-natural-height="403" style="" data-lazy-loaded="" data-src="gpte-course-template-1/456aa7ed4e8717ed941bafcd73524f2d.png"></div></div></section>
+<section data-background-color="#ffffff" data-id="119bbe15f19efe9b277e16d254c97553"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="a5566982ee085e94c0a92c36d31aba23">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Agile Integration in Action</h2>
+<h3>SaaS Integrations across Hybrid Environments </h3>
+
+<ul>
+	<li>
+	<p><span>74% of enterprises rely on at least one SaaS solution</span></p>
+	</li>
+	<li>
+	<p><span>SaaS applications are now key business assets</span></p>
+	</li>
+	<li>
+	<p><span>Must be integrated with core systems and amongst themselves</span></p>
+	</li>
+	<li>
+	<p><span>Often purchased and operated by different departments </span></p>
+	</li>
+	<li>
+	<p><span>Highly heterogeneous data models and workflows</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="28c9b5134777378a524055a0af698bfa" style="min-width: 4px; min-height: 4px; width: 359px; height: 320px; left: 641px; top: 256px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="359" data-natural-height="320" style="" data-lazy-loaded="" data-src="gpte-course-template-1/78dd5e62dab48c0235a5cdfa978a106e.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="f4de29d978b73248757b1e4c33f1f352" style="height: auto; min-width: 30px; min-height: 30px; width: 549px; left: 366px; top: 596px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong><em>Challenges</em></strong><em><strong>: </strong>multiple departments and products, security, enforcement of IT rules, long term maintenance</em></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="6e28c11a4724f3b6dd8c92c84df2350b"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="df0fe0bd7b9c83523d231c9886512c31">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Agile Integration in Action</h2>
+<h3><strong>Partner Integration</strong></h3>
+
+<ul>
+	<li>
+	<p><span>Business to Business partnership amplifies reach</span></p>
+	</li>
+	<li>
+	<p><span>Create new channels and revenue sources </span></p>
+	</li>
+	<li>
+	<p><span>Integrate with partners quicker, cheaper and more effectively</span></p>
+	</li>
+	<li>
+	<p><span>Leverage winner-takes-all dynamics and increase stickiness with partners and market share</span></p>
+	</li>
+	<li>
+	<p><span>Avoid custom integrations per partner but instead provide standard interfaces</span></p>
+	</li>
+	<li>
+	<p><span>Monetize partner relationships</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="54da6208dd2b524007dc44f985eaeca0" style="min-width: 4px; min-height: 4px; width: 283px; height: 325px; left: 837px; top: 216px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="244" data-natural-height="280" style="" data-lazy-loaded="" data-src="gpte-course-template-1/12281931d73ec687ae4fdb525da7a2e2.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="509f0316bd81c972b70a9ba5631d0383" style="height: auto; min-width: 30px; min-height: 30px; width: 948px; left: 166px; top: 571px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>Challenges</strong><span>: creating different partner tiers with different scopes of access, access control, interface documentation, avoiding customer integrations per partner, demand-based scaling, platform evolution/change management, creating secure monetization models</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="4999bb7b76221226d2e5561ae46e1172"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="4fe679e85a2cde238b1109d1d5e59f20">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Agile Integration in Action</h2>
+<h3><strong>Customer Integration</strong></h3>
+
+<ul>
+	<li>
+	<p><span>More customers expecting frictionless access to data</span></p>
+	</li>
+	<li>
+	<p><span>It has become critical to enable customers to integrate directly with your business</span></p>
+	</li>
+	<li>
+	<p><span style="font-size:18.6667px">Allowing </span>direct access to data and transactions means retention of <span style="color:rgb(53, 64, 69); font-size:21.3333px">customers </span>is higher and transaction volumes increase</p>
+	</li>
+	<li>
+	<p><span>Revenue opportunity for the company to have bulk access for the company </span></p>
+	</li>
+	<li>
+	<p><span>Customer API programs which support this business approach need to be well managed and effective</span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="ae755320d4dc856ee7202751dc93e1c6" style="min-width: 4px; min-height: 4px; width: 418px; height: 209px; left: 823px; top: 266px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="376" data-natural-height="188" style="" data-lazy-loaded="" data-src="gpte-course-template-1/540abe646ecb6fa0c27ebf53b5c247b9.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="cb2e48a40ef7f102d81d34d53330c838" style="height: auto; min-width: 30px; min-height: 30px; width: 806px; left: 229px; top: 622px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>Challenges</strong><span>: internal systems are often not designed for reuse, let alone external use, unexpected requirements, customer success becomes an important factor to consider</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="48e533f677e87dea08c9bd73e1333439"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="a66b799fada1b55d109af9d905bcf0e5">
+    <div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 11; text-align: left;" dir="ui">
+<h2 style="color:rgb(53, 64, 69)">Agile Integration in Action</h2>
+<h3>Enabling Customer Facing Apps</h3>
+
+<ul>
+	<li>
+	<p><span>Customer application strategies now draw heavily on internal IT</span></p>
+	</li>
+	<li>
+	<p><span>Mobile and IoT both drive external access to systems, as do omni-channel strategies</span></p>
+	</li>
+	<li>
+	<p><span>This means integrations need to deliver the right data to them and scale</span></p>
+	</li>
+	<li>
+	<p><span>Previously responsibility of engineering, but now it often depends on IT</span></p>
+	</li>
+	<li>
+	<p><span>Generally also links in user databases, billing, and other internal functions </span></p>
+	</li>
+</ul>
+</div>
+</div>
+<div class="sl-block" data-block-type="image" data-block-id="da647360d6b3cbc982cd4a6e568487f9" style="min-width: 4px; min-height: 4px; width: 417px; height: 331px; left: 752px; top: 206px;"><div class="sl-block-content" style="z-index: 12;"><img data-natural-width="251" data-natural-height="199" style="" data-lazy-loaded="" data-src="gpte-course-template-1/03f6bebc3f5cf0472afd7352c73c81c8.png"></div></div>
+<div class="sl-block" data-block-type="text" data-block-id="71da276785e0456b4759a49bdc7d20d8" style="height: auto; min-width: 30px; min-height: 30px; width: 874px; left: 203px; top: 576px;"><div class="sl-block-content" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 13;">
+<p style="text-align:center"><strong>Challenges</strong><span>: user management, security, scaling is a challenge with more volume, pressure for quick iteration of backend to match application development needs, pressure to handle scale</span></p>
+</div></div></section>
+<section data-background-color="#ffffff" data-id="55719ba4a5e98dae427eeb278cf38452"><div class="sl-block" data-block-type="text" style="height: auto; width: 800px; left: 0px; top: 0px;" data-block-id="f250eb270d591ad1ddf693091eabaf13"><div class="sl-block-content rh-ul" data-placeholder-tag="p" data-placeholder-text="Text" style="z-index: 10;" dir="ui">
+<h2 style="text-align:left">Summary</h2>
+<ul>
+	<li>
+	<p><span><span>Changes in Integration </span></span><span style="color:rgb(53, 64, 69); font-size:21.3333px">World</span></p>
+	</li>
+	<li>
+	<p><span><span>New Architectural Approach</span></span></p>
+	</li>
+	<li>
+	<p><span><span>Red Hat Technology Stack</span></span></p>
+	</li>
+	<li>
+	<p><span><span>Agile Integration in Action</span></span></p>
+	</li>
+</ul>
+</div></div></section>
+
+<section>
+<script type="text/javascript" >
+
+    var moduleCompletionVersion = "1.8"
+    var host = window.parent.location.host;
+    console.log("Module Completion:  version = "+moduleCompletionVersion);
+
+    /*
+        Dokeos behavior:
+            - used to re-direct after having notified LMS of module completion
+        Sumtotal behavior:
+            - Not used
+            - Student should just close the browser tab for the module (apparently the originating tab stays open and allows the student to navigate to the next module)
+    */
+    function getCourseHomepageURL() {
+
+        //uriString = "http://www.redhat.com";
+        //uriString = "https://rh.dokeos.com/main/newscorm/lp_controller.php?cidReq=SCORMTEST&action=return_to_course_homepage"
+
+        uriString = document.location.origin;
+        uriString += "/main/course_home";
+        console.log("getCourseHomepageURL = "+uriString);
+        return uriString;
+    }
+
+     /*
+     Dokeos behavior: 
+        - Request URL:      https://rh.dokeos.com/main/newscorm/lp_ajax_save_item.php
+        - Response body:    update_toc('completed','6');update_progress_bar('1', '1', '%');update_stats();
+
+        NOTE:  Need to execute the module in Dokeos as a Learner to see results in Reporting.
+            - The Reporting displays results of Learners only.
+            - If you take the module as a Trainer you can see the progress in the Modules tool as per this screenshot:  http://snag.gy/gUgcp.jpg
+    */
+    function SetSCOComplete() {
+        var SD = window.parent;
+
+        if (typeof SD.SetReachedEnd != "undefined") {
+            //This is the last page so set it complete
+            SD.SetReachedEnd();
+            SD.CommitData();
+            console.log("SetSCOComplete() just called SD.SetReachedEnd() and SD.CommitData()");
+
+            document.getElementById("completeDiv").style.display = "none";
+            console.log("typeof myDokeosWebPath = "+ typeof dokeosWebPath);
+            if(host.indexOf("dokeos") > 0) {
+                console.log("SetSCOComplete() detecting Dokeos environment.  Will display continue button");
+                document.getElementById("continueDiv").style.display = "block";
+            } else {
+                console.log("SetSCOComplete() detecting non-Dokeos environment.  Will display close button");
+                document.getElementById("closeDiv").style.display = "block";
+            }
+        }else {
+            noSCOmessage = "SetSCOComplete() LMS does not appear to support the SetReachedEnd() function";
+            alert(noSCOmessage);
+        }
+
+    }
+
+</script>
+
+<div id="completeDiv" style="color:#290909;">
+    <h2>Module Completion</h2>
+    <p>Nice job!</p>
+    <p> Click the button below to complete this module of the course:</p>
+    <input type="button" id="completeModule" value="Complete Module" style="color:#538b01;font-size:1.0em;font-family:Oswald, sans-serif;" /></br/>
+</div>
+
+<div id="continueDiv" style="display:none;color:#290909;">
+    <p>Click the button below to continue to the course homepage:</p>
+    <input type="button" id="continueModule" value="Continue" style="font-size:1.0em;font-family:Oswald, sans-serif;" onclick="top.location.href=getCourseHomepageURL()" /></br/>
+</div>
+
+<div id="closeDiv" style="display:none;color:#290909;">
+    <p>Please continue with the next item in the course. </p>
+</div>
+
+
+<script type="text/javascript" >
+    document.getElementById("completeDiv").style.display = "visible";
+    document.getElementById("continueDiv").style.display = "none";
+    document.getElementById("closeDiv").style.display = "none";
+
+    // invoke SetSCOComplete function when the completeModule button is clicked
+    var el = document.getElementById("completeModule");
+    if (typeof el.addEventListener != "undefined") {
+        el.addEventListener("click", SetSCOComplete, false);
+    } else if (el.attachEvent) {
+        el.attachEvent('onclick', SetSCOComplete);
+    }
+
+</script>
+</section>
+
+
+
+			</div>
+		</div>
+
+		<script>
+			var SLConfig = {"deck": {"id":1440930,"slug":"gpte-course-template-1","title":"AI Advanced Module 1","description":"","width":1280,"height":720,"visibility":"team","published_at":"2019-02-26T09:47:18.737Z","sanitize_messages":null,"thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/ecf9c0f09ce5220f5b5590a3988ec459/thumb.jpg?1556917345","view_count":12,"user":{"id":645440,"username":"sjayanti","name":"Satya Jayanti","description":"","thumbnail_url":"https://www.gravatar.com/avatar/628a7ac3a1547cb8565a4eb2d54b6773?s=140\u0026d=https%3A%2F%2Fstatic.slid.es%2Fimages%2Fdefault-profile-picture.png","paid":true,"pro":true,"lite":false,"team_id":32,"settings":{"id":493293,"present_controls":true,"present_upsizing":true,"present_pointer":false,"present_notes":false,"default_deck_tag_id":null},"enterprise":true,"membership":{"role":"member","manager":false,"activated":true}},"background_transition":"none","transition":"none","theme_id":176,"theme_font":"overpass2","theme_color":"no-color","auto_slide_interval":0,"comments_enabled":true,"forking_enabled":false,"rolling_links":false,"center":false,"shuffle":false,"should_loop":false,"share_notes":false,"slide_number":true,"slide_count":33,"rtl":false,"version":2,"collaborative":true,"deck_user_editor_limit":null,"data_updated_at":1560293368713,"font_typekit":"","font_google":"Overpass, Open Sans, Helvetica, sans-sarif","time_limit":null,"upsizing_enabled":true,"notes":{"048159529cf8d5927171332657f1c1ca":"S1 four conversations - this slide is the same across all 4 decks (with the deck theme highlighted)\nI get it - there is no way you can put all your money, people or time into new, digital technologies. \nNew technologies cannot solve every challenge--and neither can simply improving your existing infrastructure. \nThis is why “mode 1” and “mode 2” both exist and why the world is increasingly hybrid. \nIT organizations must balance these needs.\nHere is what we are hearing and seeing with our customers - and your peers - around their top 4 challenges or goals they are facing in their own digital transformation: \noptimizing existing, traditional resources so they can continue to add value\nintegrating old and new systems, resources, and practices\nDelivering cloud infrastructure and cloud services\nbuilding the modern apps and solutions that will take you further \nToday, we’re going to talk about the integration of applications, data, and process--across both kinds of infrastructure and resources.","af6d8fda53db6b64680e864f6c221857":"S2 market situation: What is happening in this area - what is the reason we are having this conversation? \n“Many EA pros... need to account for a high number of independently developed, siloed, customer-facing apps. In fact, 43% of businesses have 10 or more of such digital touchpoints, with 8% having 100 or more.”","1b0ab3bc10622d691370786bc085b6f7":"S3 market research: A market insight or validation of why this is still a huge issue. What are the greatest needs, etc. \nFor twenty years, the centralized model of an ESB serving an organization dominated enterprise integration.  In this model, integration was a service owned by the IT department, and shared, in the same way as telecommunication and network services.  Each project would interface to an ESB, the idea being to minimize its dependency on other departments, as well as to maximize the reuse of integration skills, which have historically been expensive.  It worked in a waterfall era, when project durations lasted many months and the integration needs could be planned out many months. \nIt does not work anymore.\nNow, innovation happens on much smaller teams with much more frequent deployments.\nThey need fast, easy avenues to collaboration and coordination.\nThe ability for coders to feel like coders again.\nInstead of a central team responsible for all integration.","3efd64cf1e34ebfe0bd7d8a6020ca8ca":"S3 market research: A market insight or validation of why this is still a huge issue. What are the greatest needs, etc. \nFor twenty years, the centralized model of an ESB serving an organization dominated enterprise integration.  In this model, integration was a service owned by the IT department, and shared, in the same way as telecommunication and network services.  Each project would interface to an ESB, the idea being to minimize it’s dependency on other departments, as well as to maximize the reuse of integration skills, which have historically been expensive.  It worked in a waterfall era, when project durations lasted many months and the integration needs could be planned out many months. \nIt doesn’t work anymore.\nNow, innovation happens on much smaller teams with much more frequent deployments.\nThey need fast, easy avenues to collaboration and coordination.\nThe ability for coders to feel like coders again.\nInstead of a central team responsible for all integration.\n\n","9add8d19be01569f78feeb97bf794efe":"IT organizations must evolve to meet organizational demands\nThis is driving many of the conversations we are having with our customers about DevOps and more\nMany of these customers are looking to shift their development and deployment processes, from traditional Waterfall development and Agile methods to DevOps and they want to learn how to enable that\nWe are also seeing customers asking about Microservices, as they switch their application architectures, away from existing monolithic and n-tier applications to highly distributed, componentized services-based apps\nAnd because of the shift in fundamental architecture, they are looking for a way to share these service via endpoints that is much easier to establish, widely adopted by the other. And a better way of sharing co-operate between teams like API.  \nOn the infrastructure side, we are seeing a lot of interest in Linux Containers, driven by the popularity of Docker, as an alternative to existing virtualization technologies.  Containers can be a key enabler of DevOps and Microservices.\nAnd finally we are seeing customers increasingly wanting to deploy their applications across a hybrid cloud environment\n","4d6734690d7666987fcbee0b6f630e14":"Gartner has defined this term “Pervasive Integration” to capture how integration is again now changing to meet the new challenges.  Essentially it is a parallel to the changes in software development with microservices.  \n\nFor twenty years, the centralized model of an ESB serving an organization dominated enterprise integration.  In this model, integration was a service owned by the IT department, and shared, in the same way as telecommunication and network services.  Each project would interface to an ESB, the idea being to minimize its dependency on other departments, as well as to maximize the reuse of integration skills, which have historically been expensive.  It worked in a waterfall era, when project durations lasted many months and the integration needs could be planned out many months. \nIt doesn’t work anymore.  Now, innovation happens on much smaller teams with much more frequent deployments. Not only are the developers embracing lean and rapid methods, but there are often many times more software developers that cannot single thread their needs through one IT organization.  The modern integration architecture looks like the figure on the right: independent teams are innovating on their own, and using APIs to capture the interoperability that they need.  In some ways this is a reversion to point to point integration, the teams go directly to the digital assets they need, without the overhead of a bus.  This is why API Management products have exploded the last few years:  API products like 3scale can help provision, manage, and analyze the API usage of an organization without impeding the agility.\n","6d83c109691409e9fe3d35113edea9c0":"Gartner has defined this term “Pervasive Integration” to capture how integration is again now changing to meet the new challenges.  Essentially it is a parallel to the changes in software development with microservices.  \n\nSo what has happened to the integration specialists of the IT organization?  Gartner has observed and in fact encouraged the redeployment of these specialists to the agile teams.  ","5bd94d11eae5eec884999e576625db7f":"S3 market research: A market insight or validation of why this is still a huge issue. What are the greatest needs, etc. \nFor twenty years, the centralized model of an ESB serving an organization dominated enterprise integration.  In this model, integration was a service owned by the IT department, and shared, in the same way as telecommunication and network services.  Each project would interface to an ESB, the idea being to minimize its dependency on other departments, as well as to maximize the reuse of integration skills, which have historically been expensive.  It worked in a waterfall era, when project durations lasted many months and the integration needs could be planned out many months. \nIt does not work anymore.\nNow, innovation happens on much smaller teams with much more frequent deployments.\nThey need fast, easy avenues to collaboration and coordination.\nThe ability for coders to feel like coders again.\nInstead of a central team responsible for all integration.","2ae2438ff147e19089afc47069ddf871":"Many customers are undergoing change.  Some are forced by market reality, some are seizing opportunity.  Some are both. To Transform is to change from one form or way of doing things to another.  This is difficult.  \nAgile Integration is a core capability in making digital transformation real and making it possible.  It establishes a new application infrastructure that facilitates making their new reality happen.  Integration bridges the legacy to the new (existing apps with new channels, SaaS applications with legacy applications; monolithic apps with microservices); it enables new value to be unlocked quickly by composing and re-composing applications and services; it establishes an infrastructure for delivering applications better and faster.  ","6f68db3ec20a1f7dd038222bec372f29":"Customers, individual players in different parts of the organization have different perspectives and need different things to succeed:\nEasier cross-silo cooperation\nHigher degrees of autonomy\nFewer gatekeepers on the path to live\nIncreasing levels of safety and reliability\nOverall speed increase\n\nTo do agile integration needs a organization-wide change from people to platform to process. You need a agile development focus on integration.","fc7aaaf52f595983a809002ad709e2f0":"These three create a solid backbone for integration to meet new challenges more efficiently and quickly.\nDistributed Integration: integration needs are now spread throughout the Enterprise. Reusable, pattern based integration where it is needed is key especially for microservices architectures\nAPI First: now becoming critical to managing internal reuse, fostering innovation and enabling customers and partners to connect\nContainers: fundamental to better software delivery and scaling as application complexity and workloads increase","78242baecd8f058f1569fc00b43c057c":"Architecture approach focuses on tying the People (Individual) with Platform (Tech) and reinventing the Process (DevOps \u0026 others) across the organization. \nIntegration teams are no longer a bottleneck and others can carry part of the burden\nDeployment \u0026 operations become more uniform, enforce rules, \u0026 span the organization\nAPIs become building blocks teams can collaborate around\nAutomation stitches everything together into reusable capabilities","8c0bfdf1f141ba380c4b67ede336553b":"Red Hat provides product offerings that fulfill these capabilities and help users realize benefits\nFuse and AMQ: core integration technologies for creating services, exposing APIs and enabling communication.  Allows integration to be deployed where needed.  Does not force a legacy ESB deployment model.\n3scale: Fosters sharing and re-use of services via APIs.  Helps organizations treat APIs as products with appropriate governance.\nOpenShift: Scalable deployment and runtime platform for containers.  Kubernetes, Docker, Jenkins.  Standardized build and deployment pipelines. \nCombined together these form a powerful architectural foundation.","50e1598f9c06bb871c584656463aa3ba":"It is lightweight Integration technology in mission critical deployments in government, healthcare, financial services and more.  Remember that we said agile software development drives the demand for APIs?  Fuse is the foundation of your APIs\nIt has patterns that supercharge your speed of integration, as do things like Rich data transformation, connectors, routing, and messaging","8bb5bea4c12f9126b23afaf216b920db":"It is lightweight Integration technology in mission critical deployments in government, healthcare, financial services and more.  Remember that we said agile software development drives the demand for APIs?  Fuse is the foundation of your APIs\nIt has patterns that supercharge your speed of integration, as do things like Rich data transformation, connectors, routing, and messaging\n","cb749f8f8b7c155a5511eecb4ae81c0b":"It is lightweight Integration technology in mission critical deployments in government, healthcare, financial services and more.  Remember that we said agile software development drives the demand for APIs?  Fuse is the foundation of your APIs\nIt has patterns that supercharge your speed of integration, as do things like Rich data transformation, connectors, routing, and messaging\n","800fa1230c76a63a296ce26092bc9ba5":"It is lightweight Integration technology in mission critical deployments in government, healthcare, financial services and more.  Remember that we said agile software development drives the demand for APIs?  Fuse is the foundation of your APIs\nIt has patterns that supercharge your speed of integration, as do things like Rich data transformation, connectors, routing, and messaging\n","294bd9941dd2ea1ed63ceaf7da223b7a":"It is lightweight Integration technology in mission critical deployments in government, healthcare, financial services and more.  Remember that we said agile software development drives the demand for APIs?  Fuse is the foundation of your APIs\nIt has patterns that supercharge your speed of integration, as do things like Rich data transformation, connectors, routing, and messaging\n","ef02211f823871086e15b18c8004eeca":"Microservices and agile development creating the need for API management.  It manages the traffic for your websites, your mobile apps, and your b2b.  It allows you to enforce your policies.  \n","c80b291cb3b05f266378d9850447877b":"Microservices and agile development creating the need for API management.  It manages the traffic for your websites, your mobile apps, and your b2b.  It allows you to enforce your policies.  \n","36479e948b65a66bc14b513cae0a07b8":"Typical use case\nIntegrate software-as-a-service (SaaS) application\nEnabling SaaS integrations across hybrid environments\nIntegrate cloud-native applications\nIntegrate with cloud native.mobile.iOt apps\nLeverage API first development and implement API Management\nIncrease internal agility and build customer/partner ecosystem\nImplement low-code UI-based integration capabilities\n\nFollowing are some additional use cases\nDeliver omni-channel experience\nBuild a customer and partner ecosystem\nAPIs as a business\n\n\n","119bbe15f19efe9b277e16d254c97553":"THREE EXAMPLES TO FOLLOW, This is the first: Strategic objective to use “cloud solutions” in many companies and these systems are central. However there are a lot of challenges. \n\n\nAny customer examples? I would stress things like maintenance over the long term plus the need to save different data in different places. Try to lay the ground work for “distributed”, also for “apis” since you often need to pull from legacy systems as well.\n","6e28c11a4724f3b6dd8c92c84df2350b":"Examples: Johnson Controls, Shipol, SITA\n","4999bb7b76221226d2e5561ae46e1172":"Examples: Johnson Controls, Shipol, SITA\n","48e533f677e87dea08c9bd73e1333439":"Examples: Johnson Controls, Shipol, SITA\n","39604af6e4adc662d80e615d031d70e5":"S3 market research: A market insight or validation of why this is still a huge issue. What are the greatest needs, etc. \nFor twenty years, the centralized model of an ESB serving an organization dominated enterprise integration.  In this model, integration was a service owned by the IT department, and shared, in the same way as telecommunication and network services.  Each project would interface to an ESB, the idea being to minimize its dependency on other departments, as well as to maximize the reuse of integration skills, which have historically been expensive.  It worked in a waterfall era, when project durations lasted many months and the integration needs could be planned out many months. \nIt does not work anymore.\nNow, innovation happens on much smaller teams with much more frequent deployments.\nThey need fast, easy avenues to collaboration and coordination.\nThe ability for coders to feel like coders again.\nInstead of a central team responsible for all integration.\n\nGartner has defined this term “Pervasive Integration” to capture how integration is again now changing to meet the new challenges.  Essentially it’s a parallel to the changes in software development with microservices.  \n\nFor twenty years, the centralized model of an ESB serving an organization dominated enterprise integration.  In this model, integration was a service owned by the IT department, and shared, in the same way as telecommunication and network services.  Each project would interface to an ESB, the idea being to minimize it’s dependency on other departments, as well as to maximize the reuse of integration skills, which have historically been expensive.  It worked in a waterfall era, when project durations lasted many months and the integration needs could be planned out many months. ","74e89f8adacb9ad7fdac46354f07c59d":"","2f2c70b435fc1ff15590b3e46c337043":"","3ccd58d15cce66f4f3ec866bc5c40462":"","4295ac63487baaf1666613ceb79a5c21":"","2852657ec436eb4ad0066465d222d2ba":"","9d88d066a850200ac35bbd76dead102b":"","cc808f81ef5be0c202723f2ac7216677":"","55719ba4a5e98dae427eeb278cf38452":""}}};
+
+				SLConfig.theme = {"id":176,"created_at":"2014-05-27T12:38:16.183Z","updated_at":"2019-05-03T13:12:29.410Z","name":"Red Hat Corporate (Archived)","thumbnail_url":"https://s3.amazonaws.com/media-p.slid.es/thumbnails/66755080be2b0c8c0146bfa70069ef16/thumb.jpg?1556889147","sanitize_messages":null,"slide_template_ids":[28642,36442,26765,26762,56704,16857,16856,16853,16855,16854,16852,16863,16862,16861,16860,16859,16858,56721,185268,185425],"font_typekit":"","font_google":"","width":960,"height":700};
+
+			// Use local fonts
+			SLConfig.fonts_url = 'lib/fonts/';
+		</script>
+
+		<script src="lib/reveal.min.js"></script>
+		<script src="lib/offline.js"></script>
+
+		<!-- Initialize the presentation -->
+		<script>
+			Reveal.initialize({
+				width: 1280,
+				height: 720,
+				margin: 0.05,
+				
+
+				hash: true,
+				controls: true,
+				progress: true,
+				mouseWheel: false,
+				showNotes: false,
+				slideNumber: true,
+
+				autoSlide: 0,
+				autoSlideStoppable: true,
+
+				center: false,
+				shuffle: false,
+				loop: false,
+				rtl: false,
+
+				transition: "none",
+				backgroundTransition: "none",
+
+				highlight: {
+					escapeHTML: false
+				},
+
+				dependencies: [
+					{ src: 'lib/reveal-plugins/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'lib/reveal-plugins/highlight/highlight.js' },
+					{ src: 'lib/reveal-plugins/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'lib/reveal-plugins/zoom/zoom.js', async: true }
+				]
+			});
+		</script>
+
+		
+  <script id="theme-js-output" type="text/javascript">var themeHTMLOutput = document.getElementById('theme-html-output');
+if( themeHTMLOutput ) {
+    themeHTMLOutput.innerHTML = '<link  rel="stylesheet" href="https://overpassmonotest-30e2.kxcdn.com/overpass-mono.css" />';
+}
+
+// (function() {
+// 
+//   var slidesInitInterval = setInterval( function() {
+//     if( window.SL && window.SL.view ) {
+//       // If we're in the editor, wait for the Blocks controller
+//       // to be initialized
+//       if( SL.editor ) {
+// 
+//         if( SL.editor.controllers && SL.editor.controllers.Blocks && SL.editor.controllers.Blocks.textSaved ) {
+//           SL.editor.controllers.Blocks.textSaved.add( function( element ) {
+//             var html = element.html();
+//             html = html.replace( /(@RedHat | @redhat)/g,                 '@redhat' );
+//             html = html.replace( 'redhat.com',                 'redhat.com' );
+//             html = html.replace( /(Red Hat|red hat|RedHat|Red hat|Redhat|redHat|red Hat)/g,  '<span class="name">Red Hat</span>' );
+//             html = html.replace( /( redhat |redhat )/g,  ' <span class="name">Red Hat</span> ' );
+//             html = html.replace( 'REDHAT',                    '<span class="name">RED HAT</span>' );
+//             html = html.replace( 'redhat<',                    '<span class="name">Red Hat</span><' );
+//             html = html.replace( 'openshift',                 '<span class="name">OpenShift</span>' );
+//             html = html.replace( '<span class="name"><span class="name">Red Hat</span></span>',                    '<span class="name">Red Hat</span>' );
+//             html = html.replace( 'redhat.com',                 'redhat.com' );
+//             html = html.replace( 'REDHAT.COM',                 'REDHAT.COM' );
+//             html = html.replace( '@redhat',                 '@redhat' );
+//             html = html.replace( /(@RedHatNews | @redhatnews)/g,                 '@RedHatNews' );
+//             html = html.replace( /(@RedHat | @redhat)/g,                 '@RedHatInc' );
+//             html = html.replace( /(RHEL-OSP|RHELOSP|Red Hat Enterprise Linux OpenStack Platform)/g,                 'Red Hat OpenStack Platform' );
+//             html = html.replace( /(openstack |openstack|open stack|openStack|Openstack)/g,                 'OpenStack' );
+//             html = html.replace( 'openstack',                    'OpenStack' );
+//             html = html.replace( 'openstack<',                    'OpenStack<' );
+// 
+//             element.html( html );
+//           } );
+// 
+//           clearInterval( slidesInitInterval );
+//         }
+// 
+//       }
+//       else {
+//         clearInterval( slidesInitInterval );
+//       }
+//     }
+//   }, 500 );
+// 
+// })();
+
+
+
+// piwik script
+var _paq = _paq || [];
+_paq.push(["trackPageView"]);
+_paq.push(["enableLinkTracking"]);
+
+/* Disabled Apr 25 since the script was unreachable
+ * and caused exports to fail. -hakim@slides.com
+(function() {
+    var u = (("https:" == document.location.protocol) ? "https" : "http") +
+    "://engstats.redhat.com/piwik/";
+    _paq.push(["setTrackerUrl", u+"piwik.php"]);
+    _paq.push(["setSiteId", "8"]);
+    var d=document, g=d.createElement("script"),
+    s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+    g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+})();
+*/
+
+
+ 
+function sliceString(selector) {
+    var elements = document.getElementsByClassName(selector);
+
+ 
+    for (var h=0; h<elements.length; h++){
+      var string = elements[h].innerText,
+          total = string.length,
+          div = '';
+
+// futile attempt to clean space
+var string = elements[h].innerText.trim();
+     
+      for (var i=0; i<total;  i++) {
+        var letter = string.charAt(i);
+        div+= '<span class="'+letter+'">'+letter+'</span>';
+      }
+      elements[h].innerHTML = div;
+    }        
+}
+sliceString('lettering');
+sliceString('lettering'); //no rogue spaces when fired twice for some reason
+
+
+
+// function sliceString(selector) {
+//    if (!document.querySelector) return;
+//    var string = document.querySelector(selector).innerText,
+//        total = string.length,
+//        html = '';
+//    for (var i=0; i<total; i++) {
+//        var letter = string.charAt(i);
+//        html+= '<span class="'+letter+'">'+letter+'</span>';
+//    }
+//    document.querySelector(selector).innerHTML = html;
+//}
+//sliceString('.lettering');</script>
+
+	</body>
+</html>
+
