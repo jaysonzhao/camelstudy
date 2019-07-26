@@ -1,16 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="
-        http://www.springframework.org/schema/beans
-  		http://www.springframework.org/schema/beans/spring-beans.xsd
-  		http://camel.apache.org/schema/spring
-		http://camel.apache.org/schema/spring/camel-spring.xsd">
-
-    <camelContext xmlns="http://camel.apache.org/schema/spring">
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="         http://www.springframework.org/schema/beans     http://www.springframework.org/schema/beans/spring-beans.xsd     http://camel.apache.org/schema/spring   http://camel.apache.org/schema/spring/camel-spring.xsd">
+    <camelContext id="camelContext-948ac5a0-dd77-4bc1-a2fc-1bebd3c36017" xmlns="http://camel.apache.org/schema/spring">
         <packageScan>
             <package>com.redhat.gpte.training.camel</package>
         </packageScan>
     </camelContext>
-
 </beans>
